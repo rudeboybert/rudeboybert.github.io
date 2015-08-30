@@ -45,11 +45,11 @@ a small {
   display:block;
 }
 
-a:hover
+/*a:hover
 {
   color: purple;
   background: #CAFFFF;
-}
+}*/
 
 
 .wrapper {
@@ -108,7 +108,19 @@ header {
   position:fixed;
 }
 
-header ul {
+
+header ul  {
+  padding-left:0;
+  padding-top:5px;
+  padding-bottom:0;
+}
+
+header ul li {
+  list-style-position:inside;
+  font-size:20px;
+}
+
+/*header ul {
   list-style:none;
   height:40px;
   
@@ -145,11 +157,6 @@ header ul a {
   height:40px;
 }
 
-strong {
-  color:#222;
-  font-weight:700;
-}
-
 header ul li + li {
   width:88px;
   border-left:1px solid #fff;
@@ -164,6 +171,12 @@ header ul a strong {
   font-size:14px;
   display:block;
   color:#222;
+}
+*/
+
+strong {
+  color:#222;
+  font-weight:700;
 }
 
 section {
