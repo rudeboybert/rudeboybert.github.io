@@ -1,72 +1,52 @@
 ---
 layout: page
-title: simple site
-tagline: Easy websites with GitHub Pages
-description: Minimal tutorial on making a simple website with GitHub Pages
+title: Albert Y. Kim
+tagline: Assistant Professor of Statistics @ Middlebury College
+description: Albert Y. Kim's Webpage
 ---
 
-[Github Pages](http://pages.github.com) provide a simple way to make a
-website using
-[Markdown](https://daringfireball.net/projects/markdown/) and
-[git](http://git-scm.com).
+Albert Y. Kim is an Assistant Professor of Statistics in the
+[Mathematics Department](http://www.middlebury.edu/academics/math/) at
+[Middlebury College](http://www.middlebury.edu/).  Born in Montreal Quebec,
+he obtained his BSc in Mathematics and Computer Science from
+[McGill University](http://www.mcgill.ca/) in 2004 and his PhD in Statistics from
+the [University of Washington](http://www.uw.edu/) in 2011.  Prior to joining
+Middlebury College, he was a Decision Support Engineering Analyst in the AdWords
+division of Google Inc and a Visiting Assistant Professor of Statistics at
+[Reed College](http://www.reed.edu/).  
 
-For me, the painful aspects of making a website are
 
-- Working with html and css
-- Finding a hosting site
-- Transferring stuff to the hosting site
 
-With [GitHub Pages](http://pages.github.com), you just write things in
-[Markdown](https://daringfireball.net/projects/markdown/),
-[GitHub](http://github.com) hosts the site for you, and you just push
-material to your GitHub repository with `git add`, `git commit`, and
-`git push`.
+<!-- <img src="/assets/photo.jpg" title="faculty photo" id="fac_photo"/>
+<p>
 
-If you love [git](http://git-scm.com/) and
-[GitHub](http://github.com), you'll love
-[GitHub Pages](http://pages.github.com), too.
+</p>
 
-The sites use [Jekyll](http://jekyllrb.com/), a
-[ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org/), to
-convert Markdown files to html, and this part is done
-automatically when you push the materials to the `gh-pages` branch
-of a GitHub repository.
+<p>
 
-The [GitHub](http://pages.github.com) and
-[Jekyll](http://jekyllrb.com) documentation is great, but I thought it
-would be useful to have a minimal tutorial, for those who just want to
-get going immediately with a simple site. To some readers, what GitHub
-has might be simpler and more direct.  But if you just want to create
-a site like the one you're looking at now, read on.
+</p> -->
 
-Start by reading the [Overview page](pages/overview.html), which
-explains the basic structure of these sites. Then read
-[how to make an independent website](pages/independent_site.html). Then
-read any of the other things, such as
-[how to test your site locally](pages/local_test.html).
 
-- [Overview](pages/overview.html)
-- [Making an independent website](pages/independent_site.html)
-- [Making a personal site](pages/user_site.html)
-- [Making a site for a project](pages/project_site.html)
-- [Making a jekyll-free site](pages/nojekyll.html)
-- [Testing your site locally](pages/local_test.html)
-- [Resources](pages/resources.html)
 
-If anything here is confusing (or _wrong_!), or if I've missed
-important details, please
-[submit an issue](https://github.com/kbroman/simple_site/issues), or (even
-better) fork [the GitHub repository for this website](http://github.com/kbroman/simple_site),
-make modifications, and submit a pull request.
+<div class="container">
+<h4><a name="contact"></a>Contact</h4>
+    <div class="row-fluid">
+        <div class="span5">
+            Albert Y. Kim<br/>
+            Mathematics Department<br>
+            Middlebury College<br>
+            14 Old Chapel Rd<br>
+            Middlebury, VT 05753<br>
+            <br>
+            Email: <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a><br>
+            Office: <a href="https://www.google.com/maps/place/Warner+Hall,+Middlebury,+VT+05753/@44.0101835,-73.1753978,17z/data=!3m1!4b1!4m2!3m1!1s0x4cb55d01b4b16bab:0x7e3ab849ef621319">Warner Hall 310</a><br>
+            Phone: +1.802.443.5564<br>
+            github: <a href="http://github.com/rudeboybert">rudeboybert</a><br>
+            twitter: <a href="http://twitter.com/rudeboybert">@rudeboybert</a><br>
+        </div>
 
----
-
-The source for this minimal tutorial is [on github](http://github.com/kbroman/simple_site).
-
-Also see my [tutorials](http://kbroman.org/pages/tutorials) on
-[git/github](http://kbroman.org/github_tutorial),
-[GNU make](http://kbroman.org/minimal_make),
-[knitr](http://kbroman.org/knitr_knutshell),
-[R packages](http://kbroman.org/pkg_primer),
-[data organization](http://kbroman.org/dataorg),
-and [reproducible research](http://kbroman.org/steps2rr).
+        <div class="span2">
+        <a href="../assets/pics/photo.jpg"><img src="../assets/pics/photo.jpg" title="Albert Y. Kim" alt="Albert Y. Kim"/></a>
+        </div>
+    </div>
+</div>
