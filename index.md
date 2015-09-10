@@ -1,46 +1,72 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: simple site
+tagline: Easy websites with GitHub Pages
+description: Minimal tutorial on making a simple website with GitHub Pages
 ---
-{% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+[Github Pages](http://pages.github.com) provide a simple way to make a
+website using
+[Markdown](https://daringfireball.net/projects/markdown/) and
+[git](http://git-scm.com).
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+For me, the painful aspects of making a website are
 
-## Update Author Attributes
+- Working with html and css
+- Finding a hosting site
+- Transferring stuff to the hosting site
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Albert Y. Kim
-      email : albert.ys.kim@gmail.com
-      github : rudeboybert
-      twitter : rudeboybert
+With [GitHub Pages](http://pages.github.com), you just write things in
+[Markdown](https://daringfireball.net/projects/markdown/),
+[GitHub](http://github.com) hosts the site for you, and you just push
+material to your GitHub repository with `git add`, `git commit`, and
+`git push`.
 
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
+If you love [git](http://git-scm.com/) and
+[GitHub](http://github.com), you'll love
+[GitHub Pages](http://pages.github.com), too.
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+The sites use [Jekyll](http://jekyllrb.com/), a
+[ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org/), to
+convert Markdown files to html, and this part is done
+automatically when you push the materials to the `gh-pages` branch
+of a GitHub repository.
 
-    $ rm -rf _posts/core-samples
+The [GitHub](http://pages.github.com) and
+[Jekyll](http://jekyllrb.com) documentation is great, but I thought it
+would be useful to have a minimal tutorial, for those who just want to
+get going immediately with a simple site. To some readers, what GitHub
+has might be simpler and more direct.  But if you just want to create
+a site like the one you're looking at now, read on.
 
-Here's a sample "posts list".
+Start by reading the [Overview page](pages/overview.html), which
+explains the basic structure of these sites. Then read
+[how to make an independent website](pages/independent_site.html). Then
+read any of the other things, such as
+[how to test your site locally](pages/local_test.html).
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+- [Overview](pages/overview.html)
+- [Making an independent website](pages/independent_site.html)
+- [Making a personal site](pages/user_site.html)
+- [Making a site for a project](pages/project_site.html)
+- [Making a jekyll-free site](pages/nojekyll.html)
+- [Testing your site locally](pages/local_test.html)
+- [Resources](pages/resources.html)
 
-## To-Do
+If anything here is confusing (or _wrong_!), or if I've missed
+important details, please
+[submit an issue](https://github.com/kbroman/simple_site/issues), or (even
+better) fork [the GitHub repository for this website](http://github.com/kbroman/simple_site),
+make modifications, and submit a pull request.
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+---
 
+The source for this minimal tutorial is [on github](http://github.com/kbroman/simple_site).
 
+Also see my [tutorials](http://kbroman.org/pages/tutorials) on
+[git/github](http://kbroman.org/github_tutorial),
+[GNU make](http://kbroman.org/minimal_make),
+[knitr](http://kbroman.org/knitr_knutshell),
+[R packages](http://kbroman.org/pkg_primer),
+[data organization](http://kbroman.org/dataorg),
+and [reproducible research](http://kbroman.org/steps2rr).
