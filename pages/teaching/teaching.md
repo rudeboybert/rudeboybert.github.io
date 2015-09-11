@@ -5,7 +5,6 @@ description: Teaching
 ---
 
 
-
 ### Courses
 
 **Middlebury College: Fall 2015 - Present**
