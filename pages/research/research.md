@@ -17,5 +17,4 @@ in a multivariate streaming environment](http://dx.doi.org/10.1016/j.sigpro.2009
 
 *  `SpatialEpi` R package: Methods and Data for Spatial Epidemiology
     + [CRAN](http://cran.r-project.org/web/packages/SpatialEpi/index.html)
-    + Development version on [GitHub]()
 * Link to data used for [Using labeled data to evaluate change detectors in a multivariate streaming environment](http://dx.doi.org/10.1016/j.sigpro.2009.04.011): tagged images of [boat traffic](http://www.stat.washington.edu/research/changedetection/) underneath the University Bridge in Seattle WA.
