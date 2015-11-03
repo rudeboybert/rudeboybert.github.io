@@ -87,32 +87,3 @@ library(rgdal)
 
 ## 4. Load a Shapefile into R
 
-
-
-
-
-
-
-
-
-
-
-
-    _includes/
-    _layouts/
-    _plugins/
-    assets/
-    pages/
-    .gitignore
-    License.md
-    Rakefile
-    ReadMe.md
-    _config.yml
-    index.md    
-    
-    
-    
-    
-    
-
-
