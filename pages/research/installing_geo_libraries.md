@@ -102,19 +102,19 @@ install.packages("dplyr", repos="https://cran.rstudio.com/")
 
 ### Load a Shapefile into R
 
-We now load a shapefile into R.  In it we find
+We now load a shapefile into R which you can download [here]({{ BASE_PATH }}/pages/research/sids.zip).  In it we find three files:
 
     sids.shp
     sids.dbf
     sids.shx
 
-We have two choices of functions for loading shapefiles into R.  Either
+We have two choices of functions for loading shapefiles into R.  We demonstrate
+both their uses below noting that in my case that the files are contained in the
+directory `/Users/rudeboybert/Downloads/sids/`; change this directory to reflect
+where your files are located.
 
-* `readShapePoly()` from the `maptools` package
-* `readOGR()` from the `rgdal` package
 
-We demonstrate both their uses below noting that in my case that the files are contained in the directory
-`/Users/rudeboybert/Downloads/sids/`; change this directory to reflect where your files are located.  
+#### maptools Package
 
 When using `readShapePoly()` from the `maptools` package, the input argument `shpfile_name` identifies the search path of the `.shp` file:
 
@@ -125,7 +125,10 @@ nc_sids <- readShapePoly(fn = shpfile_name, proj4string = CRS("+proj=longlat +el
 plot(nc_sids, axes=TRUE)
 ~~~
 
-When using `readShapePoly()` from the `maptools` package, the input argument `shpfile_dir` identifies the search path of the directory:
+
+#### rgdal Package
+
+When using `readOGR()` from the `rgdal` package, the input argument `shpfile_dir` identifies the search path of the directory:
 
 ~~~
 library(rgdal)
@@ -142,15 +145,21 @@ plot(nc_sids, axes=TRUE)
 
 ### Plot Map Using ggplot2
 
+In order to plot the shapefile data using the `ggplot2` package, we must first convert the `SpatialPolygonsDataFrame` object into a data frame
+defining each polygon (i.e. area in the region).  This is done using the `fortify()` function.
 
 ~~~
 library(ggplot2)
 library(dplyr)
-sp_obj <- nc_sids_maptools
+sp_obj <- nc_sids
 sp_obj$id <- rownames(sp_obj@data)
 map_points <- fortify(sp_obj, region="id")
 map_df <- inner_join(map_points, sp_obj@data, by="id")
-  
+~~~
+
+We can now plot this data frame using `ggplot2`
+
+~~~
 map_ggplot <- 
     ggplot(map_df, aes(x=long, y=lat, group=group)) +
     coord_map() +
