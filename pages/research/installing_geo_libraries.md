@@ -2,7 +2,6 @@
 layout: page
 title: Importing Shapefiles into `R`
 description: Importing Shapefiles into `R`
-output: html_document
 ---
 
 This tutorial demonstrates how to install all the necessary packages to import
