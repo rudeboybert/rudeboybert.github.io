@@ -3,3 +3,5 @@ _site
 .Rproj.user
 *.Rproj
 *.Rhistory
+.RData
+.Rhistory
