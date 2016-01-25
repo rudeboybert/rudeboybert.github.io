@@ -11,7 +11,10 @@ description: Teaching
 
 * MATH 116: Introduction to Statistical Science
     + [Fall 2015]({{ BASE_PATH }}/pages/teaching/courses/MATH116/2015-09.html).
-
+* MATH 216: Introduction to Data Science
+    + [Spring 2016]({{ BASE_PATH }}/pages/teaching/courses/MATH216/2016-02.html).
+* MATH 311: Statistics
+    + [Spring 2016]({{ BASE_PATH }}/pages/teaching/courses/MATH311/2016-02.html).
 
 **Reed College: Fall 2013 - Spring 2015**
 
