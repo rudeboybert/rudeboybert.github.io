@@ -14,7 +14,7 @@ This tutorial demonstrates how to install all the necessary packages to import E
 
 ### Install Compiler Tools
 
-We first need to install a C compiler and other command-line tools.  
+In case you haven't already, we first need to install a C++ compiler and other command-line tools.  
 
 #### Mac Users
 
@@ -46,7 +46,7 @@ Next we need to install two open source geospatial libraries:
 
 #### Mac Users
 
-* In your Mac menu bar go to System Preferences... -> Security & Privacy ->
+* In your Mac menu bar go to System Preferences... -> Security & Privacy -> General Tab ->
 unlock the lock on the bottom left of panel -> select "Allow apps downloaded
 from": Anywhere -> relock the lock
 * Install Macports as described in the [Quickstart](http://www.macports.org/install.php)
