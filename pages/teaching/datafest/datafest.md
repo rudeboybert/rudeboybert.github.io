@@ -26,7 +26,7 @@ target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 
 ## Event Information
 
-* **What**: 2016 DataFest Vermont 802
+* **What**: The inaugural 2016 DataFest Vermont 802
 * **Who**: Any Middlebury student with data skills, regardless of discipline.
 * **When**: Friday April 8th through Sunday April 10th.
 * **Where**: Saint Michael's College in Burlington VT. Transportation,
