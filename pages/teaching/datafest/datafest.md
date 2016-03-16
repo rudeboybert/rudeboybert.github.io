@@ -43,7 +43,7 @@ There will be an informational/sign up session
 * **When**: Thursday March 24th at 5pm
 * **Where**: Math Lounge on the third floor of Warner.
 
-For more information, contact Albert Y. Kim <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a>.
+For more information, contact Prof. Albert Y. Kim <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a>.
 
 
 
