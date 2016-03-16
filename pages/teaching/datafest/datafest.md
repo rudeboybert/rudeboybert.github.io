@@ -8,12 +8,13 @@ description:
 
 ## What is DataFest?
 
-DataFest is an internationally coordinated undergraduate data analysis hackathon.
+**DataFest is an internationally coordinated undergraduate data analysis hackathon.**
 
-Over the course of the weekend, teams of students have to make sense of a large,
-rich, and complex dataset.  At the end of the weekend, students will present their results to a panel of judges from 
-local business, academia, and government and have the chance to win prizes. Previous
-data sources include the LAPD, eHarmony.com, and Edmunds.com.
+Over the course of a weekend, teams of students have to make sense of a large, 
+rich, and complex dataset. At the end of the weekend, students will present 
+their results to a panel of judges from local business, academia, and 
+government, and have the chance to win prizes. Previous data sources include the
+LAPD, eHarmony.com, and Edmunds.com.
 
 Participating colleges this year include Duke, The Five Colleges (UMass Amherst,
 Smith, Amherst, Mount Holyoke, and Hampshire Colleges), Macalester, UC Berkeley,
@@ -23,11 +24,11 @@ Read a <a href="http://fivethirtyeight.com/datalab/the-students-most-likely-to-t
 target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 
 
-## Information
+## Event Information
 
-* **What**: The Vermont 802 DataFest
+* **What**: 2016 DataFest Vermont 802
 * **Who**: Any Middlebury student with data skills, regardless of discipline.
-* **When**: Friday April 8th through Sunday April 10th 2016.
+* **When**: Friday April 8th through Sunday April 10th.
 * **Where**: Saint Michael's College in Burlington VT. Transportation,
 accommodations, and food will be covered (most likely in their entirety).
 
@@ -37,8 +38,10 @@ accommodations, and food will be covered (most likely in their entirety).
 
 ## How do I sign up?
 
-There will be an informational session on Thursday March 24th at 5pm in the Math
-Lounge on the third floor of Warner.
+There will be an informational/sign up session
+
+* **When**: Thursday March 24th at 5pm
+* **Where**: Math Lounge on the third floor of Warner.
 
 For more information, contact Albert Y. Kim <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a>.
 
