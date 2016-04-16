@@ -6,6 +6,20 @@ description:
 
 ![alt text](datafest.jpg)
 
+
+
+
+## Sign-Up
+
+If you are interested in participating in DataFest, please complete the 
+following 
+[survey](https://docs.google.com/forms/d/1bJ8UDBZxCcUK22Z0Ivt4tRgkoeXPQnCzq-4UN2oltn4/edit?usp=drive_web)
+as soon as possible.
+
+
+
+
+
 ## What is DataFest?
 
 **DataFest is an internationally coordinated undergraduate data analysis hackathon.**
@@ -22,6 +36,9 @@ The Ohio State University, Penn State University, and Vassar College.
 
 Read a <a href="http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jobs/"
 target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
+
+
+
 
 
 ## Event Information
