@@ -7,8 +7,6 @@ description:
 ![alt text](datafest.jpg)
 
 
-
-
 ## Sign-Up
 
 If you are interested in participating in DataFest, please complete the 
