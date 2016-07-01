@@ -5,7 +5,7 @@ tagline: Assistant Professor of Statistics
 description: Albert Y. Kim's Webpage
 ---
 
-### Biography
+## Biography
 
 I am an Assistant Professor of Statistics in the
 [Mathematics Department](http://www.middlebury.edu/academics/math/) at
@@ -17,10 +17,11 @@ Middlebury College, I was a Decision Support Engineering Analyst in the AdWords
 division of Google Inc and a Visiting Assistant Professor of Statistics at
 [Reed College](http://www.reed.edu/).  
 
-<a href="../assets/images/photo.jpg"><img src="../assets/pics/photo.jpg" title="Albert Y. Kim" alt="Albert Y. Kim"/></a>
+<img src="assets/images/photo.jpg" width="200">
 
 
-### Contact
+
+## Contact
 
 **Email**: <a href="mailto:{{site.author.email}}">{{site.author.email}}</a>  
 **Online**:
