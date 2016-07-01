@@ -98,7 +98,7 @@ internationally coordinated undergraduate data analysis hackathon.
 volunteer](https://www.openintro.org/about.php) of [OpenIntro
 Statistics](https://www.openintro.org/stat/textbook.php): a free and open-source
 introductory statistics textbook.
-* **Curricular Development**: I helped craft the [Mathematics Major with
-Concentration in Statistics](http://www.reed.edu/math/requirements.html), which
-debuted in the 2016-2017 academic year.
+* **Curricular Development**: I helped craft the Reed College [Mathematics Major
+with Concentration in Statistics](http://www.reed.edu/math/requirements.html),
+which debuted in the 2016-2017 academic year.
 
