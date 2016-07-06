@@ -88,31 +88,12 @@ proposed methodology using multivariate data derived from an image stream.
 
 #### **Publications**
 
-Kim, A., Marzban, C., Percival D.B., and Stuetzle, W. (2009). [Using labeled data to evaluate change detectors in a multivariate streaming environment](http://www.sciencedirect.com/science/article/pii/S016516840900173X). *Signal Processing* **89**, 2529-2536.
+* Kim, A., Marzban, C., Percival D.B., and Stuetzle, W. (2009). [Using labeled data to evaluate change detectors in a multivariate streaming environment](http://www.sciencedirect.com/science/article/pii/S016516840900173X). *Signal Processing* **89**, 2529-2536.
 
 #### **Data & Code**
 
 [Link to data](http://www.stat.washington.edu/research/changedetection/) used for above method: manually tagged images of boat traffic
 underneath the University Bridge in Seattle WA.
-
-
-
-
-
-
-### Publications
-
-* Kim, A., Marzban, C., Percival D.B., and Stuetzle, W. (2009). [Using labeled data to evaluate change detectors
-in a multivariate streaming environment](http://dx.doi.org/10.1016/j.sigpro.2009.04.011). *Signal Processing* **89**, 2529-2536.
-
-
-### Software and Data
-
-*  `SpatialEpi` R package: Methods and Data for Spatial Epidemiology
-    + [CRAN](http://cran.r-project.org/web/packages/SpatialEpi/index.html)
-* Link to data used for [Using labeled data to evaluate change detectors in a multivariate streaming environment](http://dx.doi.org/10.1016/j.sigpro.2009.04.011): tagged images of [boat traffic](http://www.stat.washington.edu/research/changedetection/) underneath the University Bridge in Seattle WA.
-
-
 
 
 <hr>
