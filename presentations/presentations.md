@@ -4,7 +4,7 @@ title: Presentations
 description: Presentations
 ---
 
-A list of my recent presentations.
+A list of some recent presentations.
 
 ### **2016**
 

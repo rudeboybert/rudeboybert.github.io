@@ -9,15 +9,15 @@ description: Research
 
 #### **Background**
 
-I've developed a recent interest in forest ecology, in particular inter-species 
-competition model of Canham . Along with [Prof. David
+I've developed a recent interest in forest ecology, in particular the interspecies 
+competition model of Canham et al (2004), collaborating with [Prof. David
 Allen](http://www.middlebury.edu/academics/bio/faculty/node/352418) in the
 Biology Department at Middlebury College.
 
 #### **Data & Code**
 
-* [Shiny App of Tree Plot](https://shiny.middlebury.edu:3838/aykim/Focal_Trees/) 
-(Takes about 10 seconds to load)
+* [Shiny app of tree plot](https://shiny.middlebury.edu:3838/aykim/Focal_Trees/) 
+(takes about 10 seconds to load).
 
 
 

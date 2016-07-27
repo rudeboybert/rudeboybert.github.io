@@ -10,7 +10,7 @@ description: Albert Y. Kim's Webpage
 I am an Assistant Professor of Statistics in the
 [Mathematics Department](http://www.middlebury.edu/academics/math/) at
 [Middlebury College](http://www.middlebury.edu/).  Born in Montreal Quebec,
-I got my BSc in Mathematics and Computer Science from
+I earned my BSc in Mathematics and Computer Science from
 [McGill University](http://www.mcgill.ca/) in 2004 and my PhD in Statistics from
 the [University of Washington](http://www.uw.edu/) in 2011.  Prior to joining
 Middlebury College, I was a Decision Support Engineering Analyst in the AdWords
@@ -36,7 +36,7 @@ division of Google Inc and a Visiting Assistant Professor of Statistics at
 <img border="0" alt="LinkedIn" src="assets/images/icons/linkedin.svg" width="50" height="50">
 </a>
 
-**Phone**: +1.802.443.5564 (no voicemails, email please)  
+**Phone**: +1.802.443.5564 (no voicemails please, emails preferred)  
 **Office**: [Warner Hall 310](https://goo.gl/maps/87Y4t45Jfky)  
 Mathematics Department  
 Middlebury College  

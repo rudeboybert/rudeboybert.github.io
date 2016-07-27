@@ -54,7 +54,7 @@ Data for Introductory Statistics and Data Science Courses" in the [Journal of
 Statistics Education July 2015, Volume 23, Number 
 2](http://www.amstat.org/publications/jse/v23n2/kim.pdf).
 
-**Note**: there has been some 
+**Note**: there has been some recent 
 [controversy](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
 surrounding data of this sort. In our case, explicit permission was obtained
 from OkCupid and usernames were not included in the data set.
@@ -95,7 +95,7 @@ internationally coordinated undergraduate data analysis hackathon.
     DataFest](http://www.science.smith.edu/datafest/) (UMass Amherst, Smith,
     Mount Holyoke, Amherst, Hampshire colleges) in Western Massachusetts.
 * **OpenIntro Statistics**: I am a [contributing
-volunteer](https://www.openintro.org/about.php) of [OpenIntro
+volunteer](https://www.openintro.org/about.php) to [OpenIntro
 Statistics](https://www.openintro.org/stat/textbook.php): a free and open-source
 introductory statistics textbook.
 * **Curricular Development**: I helped craft the Reed College [Mathematics Major
