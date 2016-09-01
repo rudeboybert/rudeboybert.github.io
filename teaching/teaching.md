@@ -8,8 +8,7 @@ description: Teaching
 
 **Middlebury College**
 
-* MATH 116 - Introduction to Statistical Science: [Fall
-2015](courses/MATH116/2015-09.html), [Fall 2016](courses/MATH116/2016-09.html)
+* MATH 116 - Introduction to Statistical Science: [Fall 2015](courses/MATH116/2015-09.html)
 * MATH 216 - Introduction to Data Science: [Spring 2016](courses/MATH216/2016-02.html)
 * MATH 311 - Theory of Statistics: [Spring 2016](courses/MATH311/2016-02.html)
 
