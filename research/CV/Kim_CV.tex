@@ -1,0 +1,746 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+\RequirePackage[T1]{fontenc}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{filemod}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=blue,citecolor=blue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% HEADING AT TOP OF CURRICULUM VITAE
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[{\includegraphics[height=1.5in]{my_picture}}]{Your Name}
+%
+% the picture will be flush right across from the name. For this example
+% to work, make sure the extra set of curly braces is included. Also
+% makes ure that \usepackage{graphicx} is somewhere in the preamble.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+%%% SECTION HEADINGS
+
+% The section headings. Flush left in small caps down pseudo-margin.
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+%%% LISTS
+
+% This macro alters a list by removing some of the space that follows the list
+% (is used by lists below)
+\newcommand*\fixendlist[1]{%
+    \expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}}
+
+% These macros help ensure that items in outer-type lists do not get
+% separated from the next line by a page break
+% (they are used by lists below)
+\let\originalItem\item
+\newcommand*\fixouterlist[1]{%
+    \expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\csname preFixOuterList#1\endcsname\let\oldItem\item\def\item{\pagebreak[2]\oldItem}}
+    \expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}}
+\newcommand*\fixinnerlist[1]{%
+    \expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+    \expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}}
+
+% An itemize-style list with lots of space between items
+%
+% Usage:
+%   \begin{outerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{outerlist}
+\newlist{outerlist}{itemize}{3}
+    \setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+    \fixendlist{outerlist}
+    \fixouterlist{outerlist}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{lonelist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{lonelist}
+\newlist{lonelist}{itemize}{3}
+    \setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+    \fixendlist{lonelist}
+    \fixouterlist{lonelist}
+
+% An itemize-style list with little space between items
+%
+% Usage:
+%   \begin{innerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{innerlist}
+\newlist{innerlist}{itemize}{3}
+    \setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixinnerlist{innerlist}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{loneinnerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{loneinnerlist}
+\newlist{loneinnerlist}{itemize}{3}
+    \setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixendlist{loneinnerlist}
+    \fixinnerlist{loneinnerlist}
+
+%%% EXTRA SPACE
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+%%% FORMATTING MACROS
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+% Custom hyphenation rules for words that LaTeX has trouble with
+\hyphenation{bio-mim-ic-ry bio-in-spi-ra-tion re-us-a-ble pro-vid-er}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\makeheading{Albert Y.~Kim, PhD}
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Contact Information}
+
+%Google Inc.\\
+%1600 Amphitheatre Parkway\\
+%Mountain View, CA 94043 USA\\
+%\textit{Mobile:} +1.206.949.6124 \\
+%\textit{E-mail:} \email{albertkim@google.com}
+
+%Mathematics Department\\
+%Reed College\\
+%3203 SE Woodstock Blvd\\
+%Portland, OR, 97202-8199\\
+%Mobile Phone: $+$1.206.949.6124 \\
+%Webpage: \href{http://people.reed.edu/\%7Ealbkim/}{\nolinkurl{http://people.reed.edu/~albkim/}}\\
+%Work E-mail: \href{mailto:albert.kim@reed.edu}{\nolinkurl{albert.kim@reed.edu}}\\
+%Personal E-mail: \href{mailto:albert.ys.kim@gmail.com}{\nolinkurl{albert.ys.kim@gmail.com}}
+
+Mathematics Department\\
+Middlebury College\\
+14 Old Chapel Rd\\
+Middlebury, VT 05753\\
+Mobile Phone: +1.206.949.6124 \\
+Webpage: \href{http://rudeboybert.github.io/}{\nolinkurl{http://rudeboybert.github.io/}}\\
+Work E-mail: \href{mailto:aykim@middlebury.edu}{\nolinkurl{aykim@middlebury.edu}}\\
+Personal E-mail: \href{mailto:albert.ys.kim@gmail.com}{\nolinkurl{albert.ys.kim@gmail.com}}\\
+GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rudeboybert}}
+
+
+
+
+
+
+
+%%----------------------------------------------------------------------%
+%\vspace{0.1in}
+%\section{Research Interests}
+%
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Education}
+
+\textbf{University of Washington}, Seattle WA \hfill {August 2011}
+\begin{outerlist}
+\item[] Ph.D., Statistics
+        \begin{innerlist}
+        \item Thesis Topic: \emph{A Bayesian Surveillance System for 
+        Detecting Clusters of Non-Infectious Diseases}.
+        \item Advisor: Professor Jon C.~Wakefield.
+        \item Area of Study: Spatial Epidemiology, Biostatistics, 
+        Markov Chain Monte Carlo Methods.
+        \end{innerlist}
+\end{outerlist}
+
+\halfblankline
+
+\textbf{McGill University}, Montreal QC \hfill {December 2003}
+\begin{outerlist}
+\item[] B.Sc., Joint Honours in Mathematics and Computer Science
+        \begin{innerlist}
+        \item \emph{First Class Honours}.
+        \item Minor in Management.
+        \end{innerlist}
+\end{outerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Academic Experience}
+
+\textbf{Middlebury College, Middlebury VT} \hfill {August 2015 to Present}
+\begin{outerlist}
+    \item[] Assistant Professor of Statistics, Mathematics Department 
+    	\begin{innerlist}
+		\item Courses taught:
+		\begin{innerlist}
+		\item[$\circ$] MATH 116 Introduction to Statistical Science:  Introductory 
+		statistics aimed primarily at non-math majors
+		\item[$\circ$] MATH 216 Introduction to Data Science: Introductory data science
+		\item[$\circ$] MATH 311 (Theory of) Statistics: Upper-level undergraduate
+		statistics course 
+		\item[$\circ$] MATH 500 Independent Study: Reading course on Machine Learning 
+		with Mohamed Hussein
+		\end{innerlist}
+	\end{innerlist}
+\end{outerlist}
+
+\halfblankline
+
+\textbf{Reed College, Portland OR} \hfill {August 2013 to July 2015}
+\begin{outerlist}
+    \item[] Visiting Assistant Professor of Statistics, Mathematics Department
+    \begin{innerlist}
+        \item Responsibilities: 
+		\begin{innerlist}
+		\item[$\circ$] Teaching undergraduate probability and statistics courses.
+		\item[$\circ$] Supervising senior theses.
+		\end{innerlist}
+		\item Courses taught:
+		\begin{innerlist}
+		\item[$\circ$] MATH 141 Introduction to Probability and Statistics:  Introductory 
+		statistics aimed primarily at non-math majors
+		\item[$\circ$] MATH 391 Probability: Probability for mathematically 
+		advanced students.
+		\item[$\circ$] MATH 392 Mathematical Statistics: Statistics for mathematically
+		 advanced students
+		\item[$\circ$] MATH 241 Case Studies in Statistical Analysis:  Introductory 
+		data science
+	\end{innerlist}
+    \end{innerlist}
+\end{outerlist}
+
+\halfblankline
+
+\textbf{University of Washington Seattle, WA} \hfill {June 2010 to August 2010}
+\begin{outerlist}
+    \item[] Pre-Doctoral Instructor, Statistics Department
+    \begin{innerlist}
+		\item Courses taught:
+		\begin{innerlist}
+		\item[$\circ$] STAT 390 Statistics for Engineers and Scientists:
+		Introductory statistics for non-statistics science and engineering majors	\end{innerlist}
+    \end{innerlist}
+\end{outerlist}
+
+\halfblankline
+
+\textbf{University of Washington Seattle, WA} \hfill {September 2004 to June 2005}
+\begin{outerlist}
+    \item[] Teaching Assistant, Statistics Department
+    \begin{innerlist}
+		\item Courses taught:
+		\begin{innerlist}
+		\item[$\circ$] STAT 220 Basic Statistics:  Introductory
+        statistics for non-science majors. 
+        \end{innerlist}
+    \end{innerlist}
+\end{outerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Professional Experience}
+
+\textbf{Decision Support Engineering Analyst} \hfill {June 2011 to March 2013}
+\begin{outerlist}
+    \item[] Ads Metrics, Google Inc., Mountain View, CA
+    \begin{innerlist}
+        \item Manager: Nicholas Chamandy
+        \item Responsibilities:
+            \begin{innerlist}
+			\item[$\circ$] Quantitative analyst in Ads Metrics (analyst sub-team 
+			of Google AdWords), tasked with ensuring the quality of search 
+			ads shown on google.com.
+			\item[$\circ$] Extensive use of Google's internal MapReduce system 
+			for distributed computing on clusters of computers
+			\item[$\circ$] Use of advanced statistical techniques for analysis 
+			in a ``big data'' setting.
+			\item[$\circ$] Communicated results and findings to other analysts, 
+			engineers, and managers in the Ads Quality branch of Google AdWords.
+			\item[$\circ$] Specific projects contributed to as an analyst: 
+			a) Long-Term Value revamping of the Google AdWords auction 
+			procedure b) Ads Human Evaluation, members of which analyze user 
+			ratings of ads shown on google.com c) Personalization effort to 
+			optimize ads targeting on google.com.
+            \end{innerlist}
+    \end{innerlist}
+\end{outerlist}
+
+\halfblankline
+
+\textbf{Decision Support Engineering Analyst Intern} \hfill {January 2010 to March 2010}
+\begin{outerlist}
+    \item[] Ads Metrics, Google Inc., Mountain View, CA
+    \begin{innerlist}
+        \item Manager: Nicholas Chamandy
+        \item Responsibilities:
+            \begin{innerlist}
+			\item[$\circ$] Same as full time position described above.
+			\item[$\circ$] Specific projects contributed to as an analyst: Task 
+			Classification Project, where the intent of Google users are modeled 
+			based on search queries and ad clicks.
+            \end{innerlist}
+    \end{innerlist}
+\end{outerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Peer-Reviewed Publications}
+
+\begin{bibenum}
+    \item A.Y.~Kim, and J.~Wakefield. (2016) A Bayesian Method for Cluster Detection with Application to Brain and Breast Cancer in Puget Sound. \emph{Epidemiology}, 27(3), 347-55. 
+    \item A.Y.~Kim, and A.~Escobedo-Land. (2015) OkCupid Profile Data for Introductory Statistics and Data Science Courses.  \emph{Journal of Statistical Education}, 23(2).  
+    \item J.~Wakefield, and A.Y.~Kim. (2013) A Bayesian Model for Cluster Detection. \emph{Biostatistics}, 14(4), 752-765.
+    \item A.Y.~Kim, C.~Marzban, D.B.~Percival, and W.~Stuetzle (2009) Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. \emph{Signal Processing}, 89(12), 2529-2536.  
+\end{bibenum}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+%\vspace{0.1in}
+%\section{Preprints or In Preparation}
+%
+%\begin{bibenum}
+%    \item  
+%\end{bibenum}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Awards}
+\begin{innerlist}
+    \item Dorothy M. Gilford Teaching Award: University of Washington Department of Statistics, 2005. Awarded annually to recognize the best teaching assistant.
+    \item Bill and Hilde Birnbaum Fellowship: University of Washington Department of Statistics, 2004.  Scholarship awarded annually to one incoming student.
+\end{innerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Student Advising}
+% Reference for Jacob Menick, Philip Stallworth, Liam Bowcock, Bryan Kim, 
+% Kevin Gallagher, Johannes Harkins
+% Adriana Escobedo-Land, Torrey Payne, Tristan Hechtel, Julie Martin, 
+% Jed Grabman,
+% Enrique Dupleich Rozo, Aviva Shwayder, 
+% Carter Pribis
+\begin{innerlist}
+	\item Independent Study (MATH 500): Mohamed Hussein, reading course on
+	statistical/machine learning, 2016. 
+	\item Independent Study (MATH 482): Liam Bowcock, reading course on 
+	measure theoretic probability, 2015.
+	\item Paper: Adriana Escobedo-Land, ``OkCupid Profile Data for Intro 
+	Stats and Data Science Courses'', 2015
+	\item Summer Science Research Fellowship: Jacob Menick, ``Evaluating Latent 
+	Dirichlet Allocation Topics'', 2014.
+	\item Thesis: Kevin Gallagher, ``Building a Better Mortgage-Backed Security:
+	Correctly Pricing Associated Risks'', 2014.
+	\item Thesis: Tristan Hechtel ``Pay It Forward'' Tuition: An Econometric 
+	Analysis'', 2014.
+	\item Thesis: Torrey Payne, ``The Generalist Bias: Estimating the 
+	Value of Three-Point Shooting in the National Basketball Association'', 2014.
+	\item Thesis: Joan Wang, ``Food Hinterlands: The Sprawling of 
+	Food Deserts'', 2014.
+\end{innerlist}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Presentations}
+
+\begin{innerlist}
+	\item Tech Talk, May 2016: Using GitHub for Education to Encourage Open Learning and Facilitate Feedback. Middlebury College ``Digital Liberal Arts Behind the Scenes series'', Middlebury VT.
+	\item Meetup, April 2016: How to Teach Data Science. Burlington Data Scientists Meetup, Burlington VT.
+    \item Paper, August 2015: A Bayesian Model for Detecting Cluster Detection. New Researchers Conference, Joint Statistical Meetings, Seattle WA.
+    \item Tech Talk, June 2015: Teaching Data Science to Undergrads. 729 Miles of Technology Conference, Reed College, Portland OR. 
+    \item Tech Talk, June 2015: Teaching data science to undergrads: an ex-Googler's tales from the trenches. Google Inc, Mountain View, CA.
+    \item Paper, February 2014: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Oregon Chapter of the American Statistical Association, Portland OR.
+    \item Paper, August 2010: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Joint Statistical Meetings, Vancouver BC Canada.
+    \item Paper, August 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Joint Statistical Meetings, Denver CO.
+    \item Paper, May 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Interface Conference, Durham NC.
+    \item Report, February 2006: Changepoint Detection in Multivariate Data Streams. Counter Improvised Explosive Device Meeting, Naval Research Laboratory, Washington DC.
+\end{innerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Panels}
+
+\begin{innerlist}
+	\item ``Open Source Resources for Mathematics: Benefits and Costs'', Mathematical Association of America Mathfest conference, August 2014. Portland OR.
+	\item Career speakers panel, May 2014. Statistical Society of Canada Annual Meeting Student Conference, Toronto ON.
+\end{innerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Computing Skills}
+
+\begin{innerlist}
+	\item Programming languages: C, Python, MySQL, Java, Julia.
+    \item Operating systems: UNIX, Mac OS X, Windows.
+    \item Applications: R, Git, MATLAB, MapReduce.
+    \item Maintainer of the following \verb#R# open-source software packages
+    \begin{innerlist}
+    	\item[$\circ$] \verb#SpatialEpi#: Data and methods for spatial epidemiology
+		\item[$\circ$] \verb#resampledata#: Package of data sets from ``Mathematical
+		Statistics with Resampling in R'' by Chihara and Hesterberg.
+	\end{innerlist}
+	\item Contributor to \verb#oilabs# \verb#R# package of data and code 
+	necessary for R labs accompanying OpenIntro textbook.
+\end{innerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Journal Review Service}
+
+\begin{innerlist}
+    \item The American Statistician 
+    %An Approach to Expose Undergraduates to Authentic Data Analysis Processes
+    \item Journal for Quantitative Analysis in Sports
+    % Crowd-Ranking: A Markov-based method for ranking alternatives
+    \item Technology Innovations in Statistics Education
+    % Using Visualization as a Gateway Drug to Statistics in Week One
+\end{innerlist}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{External Service}
+\begin{innerlist}
+    \item Volunteer OpenIntro open-source introductory statistics textbook \href{https://www.openintro.org/}{https://www.openintro.org/}
+    \item Organizing committee, 2016 ASA DataFest
+\end{innerlist}
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Workshops Attended}
+
+\begin{innerlist}
+	\item Calculus
+	\item (Invited) PCMI
+	\item Big Data in the Liberals Arts Curriculum
+	\item Advanced R
+\end{innerlist}
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{College Service}
+
+\begin{innerlist}
+	\item Faculty lead for Green Chicken student math competition between 
+	Williams and Middlebury Colleges (with E. Proctor), 2016
+	\item Faculty lead for R Community of Practice for Middlebury faculty, 2016-present.
+	%\item Creator of Middlebury College data science minor, 2016
+	\item Co-organizer of inaugural ASA DataFest Vermont (with P. Yates), 2016
+	\item Co-creator of Reed College statistics concentration within mathematics
+	major (with A. Jones), 2015
+\end{innerlist}
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Personal}
+
+\begin{innerlist}
+	\item Languages: English, French (fluent), Korean (conversational).
+	\item Interests: American history, hiking, standup paddleboarding, hockey, skiing, bicycling, and backcountry camping.
+\end{innerlist}
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{Last Updated}
+\filemodprintdate{\jobname}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+

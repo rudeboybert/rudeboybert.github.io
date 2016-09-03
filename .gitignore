@@ -5,3 +5,7 @@ _site
 *.Rhistory
 .RData
 .Rhistory
+*.aux
+*.log
+*.out
+*.synctex.gz

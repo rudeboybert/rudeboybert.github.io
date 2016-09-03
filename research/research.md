@@ -4,7 +4,6 @@ title: Research
 description: Research
 ---
 
-
 ## Forest Ecology
 
 #### **Background**
@@ -100,6 +99,8 @@ underneath the University Bridge in Seattle WA.
 <hr>
 
 
-## Service
+<!--
+## Curriculum Vitae
 
-* **Journal Refereeing**: [The American Statistician](http://www.tandfonline.com/toc/utas20/current) and the [Journal of Quantitative Analysis in Sports](www.degruyter.com/view/j/jqas).
+Click [here](CV/Kim_CV.pdf) for my CV.
+-->
