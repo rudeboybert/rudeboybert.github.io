@@ -7,7 +7,7 @@ description: Personal
 ## **Hobbies**
 
 * My [goodreads](https://www.goodreads.com/review/list/22753418-albert?shelf=read&utm_medium=api) reading list.
-* My (very incomplete) [AllTrails](http://www.alltrails.com/members/albert-kim) hiking/backcountry profile.
+* My (very incomplete) [AllTrails](http://www.alltrails.com/members/albert-kim/home) hiking/backcountry profile.
 * I like beer; check out my
 [Untappd](https://untappd.com/user/rudeboybert) profile for my ratings.
 * I drive around Vermont a lot, necessitating podcasts to distract me. My two
