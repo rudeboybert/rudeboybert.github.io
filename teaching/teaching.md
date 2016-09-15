@@ -4,7 +4,16 @@ title: Teaching
 description: Teaching
 ---
 
-## Courses
+
+## Current Courses
+
+* MATH 116 - Introduction to Statistical and Data Sciences (new title): [Fall 2016](https://rudeboybert.github.io/MATH116/)
+* MATH 216 - Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/)
+
+
+
+
+## Past Courses
 
 **Middlebury College**
 
