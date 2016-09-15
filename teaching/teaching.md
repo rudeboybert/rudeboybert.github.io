@@ -7,6 +7,8 @@ description: Teaching
 
 ## Current Courses
 
+**Middlebury College**  
+
 * MATH 116 - Introduction to Statistical **and Data** Sciences (new title): [Fall 2016](https://rudeboybert.github.io/MATH116/)
 * MATH 216 - Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/)
 
@@ -15,7 +17,7 @@ description: Teaching
 
 ## Past Courses
 
-**Middlebury College**
+**Middlebury College**  
 
 * MATH 116 - Introduction to Statistical Science: [Fall 2015](courses/MATH116/2015-09.html)
 * MATH 216 - Introduction to Data Science: [Spring 2016](courses/MATH216/2016-02.html)
