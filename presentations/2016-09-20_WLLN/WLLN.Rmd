@@ -137,7 +137,7 @@ ggplot(data=sample_means_overall, aes(x=n, y=xbar)) +
 Let $X$ be a RV with mean $\mu$ and $\sigma<\infty$. then
 
 1. The standard deviation of $\overline{X}_n = \sqrt{\frac{\sigma^2}{n}}$
-1. Chebyshev's Inequality
+1. Chebyshev's Inequality: 
 
   
   
