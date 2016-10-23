@@ -80,11 +80,12 @@ This can be done by installing QGIS, which is an open-source alternative to ArcG
 
 Next we install two R packages that provide functions to interface the previously installed geospatial libraries:
 the `rgeos` and `rgdal` packages. However, instead of installing pre-compiled versions, we install from raw source code
-and compile from our own machines by adding `type="source"`.  In R run the following two commands.
+and compile from our own machines by adding `type="source"`. We also install `maptools` the regular way:
 
 ~~~
 install.packages("rgeos", repos="https://cran.rstudio.com/", type="source")
 install.packages("rgdal", repos="https://cran.rstudio.com/", type="source")
+install.packages("maptools")
 ~~~
 
 After installation, test that both packages work by running the following two commands in R:
@@ -94,6 +95,7 @@ library(rgeos)
 library(rgdal)
 ~~~
 
+<!--
 Finally, for the purposes of this tutorial, install the `maptools`, `ggplot2`, and `dplyr` packages:
 
 ~~~
@@ -101,7 +103,7 @@ install.packages("maptools", repos="https://cran.rstudio.com/")
 install.packages("ggplot2", repos="https://cran.rstudio.com/")
 install.packages("dplyr", repos="https://cran.rstudio.com/")
 ~~~
-
+-->
 
 
 * * *
