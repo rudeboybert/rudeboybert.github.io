@@ -18,7 +18,8 @@ In case you haven't already, we first need to install a C++ compiler and other c
 
 #### Mac Users
 
-* Install <!--either [Xcode](https://developer.apple.com/xcode/download/) or--> the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
+<!--either [Xcode](https://developer.apple.com/xcode/download/) or-->
+* Install the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
 have a (free) Apple ID.
 * Open Terminal by going to a Finder window -> Applications -> Utilities ->
 Terminal and then
@@ -37,13 +38,14 @@ Download and install [Rtools](https://cran.r-project.org/bin/windows/Rtools/). N
 
 
 
-### Install `geos` and `gdal` Geospatial Libraries
+### Install `geos` and `gdal` Geospatial Libraries via QGIS
 
 Next we need to install two open source geospatial libraries: 
 
 * [geos](http://trac.osgeo.org/geos/): Geometry Engine Open Source 
 * [gdal](http://www.gdal.org/): Geospatial Data Abstraction Library
 
+<!--
 #### Mac Users
 
 * In your Mac menu bar go to System Preferences... -> Security & Privacy -> General Tab ->
@@ -62,7 +64,9 @@ geospatial libraries.  In Terminal
 #### Windows Users
 
 Follow the instructions in [Quick Start for OSGeo4W Users](http://trac.osgeo.org/osgeo4w/#QuickStartforOSGeo4WUsers)
+-->
 
+This can be done by installing QGIS, which is an open-source alternative to ArcGIS: <http://www.qgis.org/en/site/forusers/download.html>
 
 
 * * *
@@ -100,7 +104,7 @@ install.packages("dplyr", repos="https://cran.rstudio.com/")
 
 
 
-### Load a Shapefile into R
+### Testing: Load a Shapefile into R
 
 We now load a shapefile into R which you can download [here]({{ BASE_PATH }}/pages/research/sids.zip).  In it we find three files:
 
