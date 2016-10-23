@@ -79,7 +79,8 @@ This can be done by installing QGIS, which is an open-source alternative to ArcG
 ### 3. Install Necessary R Packages
 
 Next we install two R packages that provide functions to interface the previously installed geospatial libraries:
-the `rgeos` and `rgdal` packages.  In R run the following two commands.
+the `rgeos` and `rgdal` packages. However, instead of installing pre-compiled versions, we install from raw source code
+and compile from our own machines by adding `type="source"`.  In R run the following two commands.
 
 ~~~
 install.packages("rgeos", repos="https://cran.rstudio.com/", type="source")
