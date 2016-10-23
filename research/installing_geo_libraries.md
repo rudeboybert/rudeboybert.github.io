@@ -18,7 +18,7 @@ In case you haven't already, we first need to install a C++ compiler and other c
 
 #### Mac Users
 
-* Install either [Xcode](https://developer.apple.com/xcode/download/) or the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
+* Install <!--either [Xcode](https://developer.apple.com/xcode/download/) or--> the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
 have a (free) Apple ID.
 * Open Terminal by going to a Finder window -> Applications -> Utilities ->
 Terminal and then
