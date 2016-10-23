@@ -22,7 +22,7 @@ Some of you may have already done this in the last two weeks. If you recall
 doing the last step below in the last two weeks, then ignore this step.
 
 <!--either [Xcode](https://developer.apple.com/xcode/download/) or-->
-* Install the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
+* Install the [Command Line Tools (macOS 10.12) for Xcode](https://developer.apple.com/downloads/). You’ll need to
 have a (free) Apple ID.
 * Open Terminal by going to a Finder window -> Applications -> Utilities ->
 Terminal and then
