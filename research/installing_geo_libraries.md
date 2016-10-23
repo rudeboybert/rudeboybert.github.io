@@ -12,7 +12,7 @@ This tutorial demonstrates how to install all the necessary packages to import E
 
 
 
-### Install Compiler Tools
+### 1. Install Compiler Tools
 
 In case you haven't already, we first need to install a C++ compiler and other command-line tools.  
 
@@ -38,7 +38,7 @@ Download and install [Rtools](https://cran.r-project.org/bin/windows/Rtools/). N
 
 
 
-### Install `geos` and `gdal` Geospatial Libraries via QGIS
+### 2. Install `geos` and `gdal` Geospatial Libraries via QGIS
 
 Next we need to install two open source geospatial libraries: 
 
@@ -73,7 +73,7 @@ This can be done by installing QGIS, which is an open-source alternative to ArcG
 
 
 
-### Install Necessary R Packages
+### 3. Install Necessary R Packages
 
 Next we install two R packages that provide functions to interface the previously installed geospatial libraries:
 the `rgeos` and `rgdal` packages.  In R run the following two commands.
@@ -104,7 +104,7 @@ install.packages("dplyr", repos="https://cran.rstudio.com/")
 
 
 
-### Testing: Load a Shapefile into R
+### 4. Testing: Load a Shapefile into R
 
 We now load a shapefile into R which you can download [here]({{ BASE_PATH }}/pages/research/sids.zip).  In it we find three files:
 
@@ -147,7 +147,7 @@ plot(nc_sids, axes=TRUE)
 
 
 
-### Plot Map Using ggplot2
+### 5. Plot Map Using ggplot2
 
 In order to plot the shapefile data using the `ggplot2` package, we must first convert the `SpatialPolygonsDataFrame` object into a data frame
 defining each polygon (i.e. area in the region).  This is done using the `fortify()` function.
