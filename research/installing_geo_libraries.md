@@ -18,6 +18,9 @@ In case you haven't already, we first need to install a C++ compiler and other c
 
 #### Mac Users
 
+Some of you may have already done this in the last two weeks. If you recall
+doing the last step below in the last two weeks, then ignore this step.
+
 <!--either [Xcode](https://developer.apple.com/xcode/download/) or-->
 * Install the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
 have a (free) Apple ID.
@@ -25,7 +28,7 @@ have a (free) Apple ID.
 Terminal and then
     + Run the command: `sudo xcodebuild -license`
     + Scroll to the bottom and `agree` to the licence.
-    + Open a new tab by pressing command+T and run the command: `xcode-select --install`
+    + Open a new tab by pressing command+T and run the command: `sudo xcode-select --install`
 
 
 #### Windows Users
