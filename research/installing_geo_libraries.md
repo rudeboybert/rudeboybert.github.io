@@ -12,23 +12,19 @@ This tutorial demonstrates how to install all the necessary packages to import E
 
 
 
-### 1. Install Compiler Tools
+### Install Compiler Tools
 
 In case you haven't already, we first need to install a C++ compiler and other command-line tools.  
 
 #### Mac Users
 
-Some of you may have already done this in the last two weeks. If you recall
-doing the last step below in the last two weeks, then ignore this step.
-
-<!--either [Xcode](https://developer.apple.com/xcode/download/) or-->
-* Install the [Command Line Tools (macOS 10.12) for Xcode](https://developer.apple.com/downloads/). You’ll need to
+* Install either [Xcode](https://developer.apple.com/xcode/download/) or the [Command Line Tools for Xcode](https://developer.apple.com/downloads/). You’ll need to
 have a (free) Apple ID.
 * Open Terminal by going to a Finder window -> Applications -> Utilities ->
 Terminal and then
     + Run the command: `sudo xcodebuild -license`
     + Scroll to the bottom and `agree` to the licence.
-    + Open a new tab by pressing command+T and run the command: `sudo xcode-select --install`
+    + Open a new tab by pressing command+T and run the command: `xcode-select --install`
 
 
 #### Windows Users
@@ -41,14 +37,13 @@ Download and install [Rtools](https://cran.r-project.org/bin/windows/Rtools/). N
 
 
 
-### 2. Install `geos` and `gdal` Geospatial Libraries via QGIS
+### Install `geos` and `gdal` Geospatial Libraries
 
 Next we need to install two open source geospatial libraries: 
 
 * [geos](http://trac.osgeo.org/geos/): Geometry Engine Open Source 
 * [gdal](http://www.gdal.org/): Geospatial Data Abstraction Library
 
-<!--
 #### Mac Users
 
 * In your Mac menu bar go to System Preferences... -> Security & Privacy -> General Tab ->
@@ -67,25 +62,21 @@ geospatial libraries.  In Terminal
 #### Windows Users
 
 Follow the instructions in [Quick Start for OSGeo4W Users](http://trac.osgeo.org/osgeo4w/#QuickStartforOSGeo4WUsers)
--->
 
-This can be done by installing QGIS, which is an open-source alternative to ArcGIS: <http://www.qgis.org/en/site/forusers/download.html>
 
 
 * * *
 
 
 
-### 3. Install Necessary R Packages
+### Install Necessary R Packages
 
 Next we install two R packages that provide functions to interface the previously installed geospatial libraries:
-the `rgeos` and `rgdal` packages. However, instead of installing pre-compiled versions, we install from raw source code
-and compile from our own machines by adding `type="source"`. We also install `maptools` the regular way:
+the `rgeos` and `rgdal` packages.  In R run the following two commands.
 
 ~~~
 install.packages("rgeos", repos="https://cran.rstudio.com/", type="source")
 install.packages("rgdal", repos="https://cran.rstudio.com/", type="source")
-install.packages("maptools")
 ~~~
 
 After installation, test that both packages work by running the following two commands in R:
@@ -95,7 +86,6 @@ library(rgeos)
 library(rgdal)
 ~~~
 
-<!--
 Finally, for the purposes of this tutorial, install the `maptools`, `ggplot2`, and `dplyr` packages:
 
 ~~~
@@ -103,14 +93,14 @@ install.packages("maptools", repos="https://cran.rstudio.com/")
 install.packages("ggplot2", repos="https://cran.rstudio.com/")
 install.packages("dplyr", repos="https://cran.rstudio.com/")
 ~~~
--->
+
 
 
 * * *
 
 
 
-### 4. Testing: Load a Shapefile into R
+### Load a Shapefile into R
 
 We now load a shapefile into R which you can download [here]({{ BASE_PATH }}/pages/research/sids.zip).  In it we find three files:
 
@@ -153,7 +143,7 @@ plot(nc_sids, axes=TRUE)
 
 
 
-### 5. Plot Map Using ggplot2
+### Plot Map Using ggplot2
 
 In order to plot the shapefile data using the `ggplot2` package, we must first convert the `SpatialPolygonsDataFrame` object into a data frame
 defining each polygon (i.e. area in the region).  This is done using the `fortify()` function.
@@ -192,4 +182,3 @@ map_ggplot
 
 * [Installing rgeos and rgdal on a Mac](http://tlocoh.r-forge.r-project.org/mac_rgeos_rgdal.html)
 * [Plotting polygon shapefiles](https://github.com/hadley/ggplot2/wiki/plotting-polygon-shapefiles)
-
