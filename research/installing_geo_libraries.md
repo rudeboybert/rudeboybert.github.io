@@ -182,4 +182,3 @@ map_ggplot
 
 * [Installing rgeos and rgdal on a Mac](http://tlocoh.r-forge.r-project.org/mac_rgeos_rgdal.html)
 * [Plotting polygon shapefiles](https://github.com/hadley/ggplot2/wiki/plotting-polygon-shapefiles)
-
