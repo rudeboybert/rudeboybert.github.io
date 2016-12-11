@@ -8,6 +8,7 @@ A list of some recent presentations.
 
 ### **2016**
 
+* **2016/11.08** - ["The Statistical Modeling of Interspecies Competition on the Growth of Trees"](http://rpubs.com/rudeboybert/Tree): Middlebury College Math Colloquium.
 * **2016/09/29** - ["Weak Law of Large Numbers"](2016-09-20_WLLN/WLLN.html): Middlebury College Math Department Math Chats: "A Favorite 5 Minute Proof"
 * **2016/05/03** - ["Using GitHub for Education to Encourage Open Learning and 
 Facilitate Feedback"](2016-05-03_GitHub/GitHub.html): Middlebury College
