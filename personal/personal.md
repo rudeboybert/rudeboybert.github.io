@@ -22,4 +22,7 @@ favorite at the moment are:
 
 My wedding dance party mix:
 
-<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A125983974%3Aplaylist%3A1v8vBtH1x0qymivHipYtc9" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed/user/125983974/playlist/1v8vBtH1x0qymivHipYtc9" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
+
+
+
