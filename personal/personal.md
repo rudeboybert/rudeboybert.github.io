@@ -21,9 +21,9 @@ favorite at the moment are:
 * [Judge John Hodgman](http://www.maximumfun.org/shows/judge-john-hodgman): A fake internet courtroom podcast adjudicating on semantics and social norms. Example case: "Is a hotdog a sandwich?"
 * BBC Radio 4's [In Our Time](http://www.bbc.co.uk/programmes/b006qykl/episodes/downloads) hosted by Melvyn Bragg.
 
-My wedding dance party mix:
+My (partial) wedding dance party mix:
 
-<iframe src="https://open.spotify.com/embed/user/125983974/playlist/1v8vBtH1x0qymivHipYtc9" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed/user/125983974/playlist/1v8vBtH1x0qymivHipYtc9" width="500" height="600" frameborder="0" allowtransparency="true"></iframe>
 
 
 
