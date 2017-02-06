@@ -17,8 +17,9 @@ description: Personal
 
 I drive around Vermont a lot, necessitating podcasts to distract me. My two
 favorite at the moment are:
-    + [Judge John Hodgman](http://www.maximumfun.org/shows/judge-john-hodgman): A fake internet courtroom podcast adjudicating on semantics and social norms. Example case: "Is a hotdog a sandwich?"
-    + BBC Radio 4's [In Our Time](http://www.bbc.co.uk/programmes/b006qykl/episodes/downloads) hosted by Melvyn Bragg.
+
+* [Judge John Hodgman](http://www.maximumfun.org/shows/judge-john-hodgman): A fake internet courtroom podcast adjudicating on semantics and social norms. Example case: "Is a hotdog a sandwich?"
+* BBC Radio 4's [In Our Time](http://www.bbc.co.uk/programmes/b006qykl/episodes/downloads) hosted by Melvyn Bragg.
 
 My wedding dance party mix:
 
