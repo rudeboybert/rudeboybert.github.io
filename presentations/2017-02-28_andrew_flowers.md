@@ -4,6 +4,8 @@ title: The Six Types of Data Journalism Stories
 description: Andrew Flowers
 ---
 
+### Andrew Flowers
+
 Stay tuned for details on Andrew Flowers' (former Quantitative Editor and economics writer for [FiveThirtyEight](https://fivethirtyeight.com/)) talk at Middlebury College on Tuesday February 28th, 2017, including
 
 * Room
