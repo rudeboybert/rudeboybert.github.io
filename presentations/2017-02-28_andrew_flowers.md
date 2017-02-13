@@ -4,15 +4,13 @@ title: The Six Types of Data Journalism Stories
 description: Andrew Flowers
 ---
 
-### Andrew Flowers
+* **Date/Time**: Tuesday, February 28, 2017 5:30pm
+* **Location**: <a target="_blank" class="page-link" href="https://www.google.com/maps/place/Axinn+Center+at+Starr+Library,+Middlebury,+VT+05753/">Axinn 229</a>
+* **Students Only**: If you are interested in meeting with Andrew Flowers separately, please fill out this <a target="_blank" class="page-link" href="https://docs.google.com/a/middlebury.edu/forms/d/e/1FAIpQLSd6G78kYQPlO9yD9-zRPkdlslR1dfdFhEa0fbD9JB-UmCe3qA/viewform">Google Form</a> (Middlebury login required).
 
-Stay tuned for details on Andrew Flowers' (former Quantitative Editor and economics writer for [FiveThirtyEight](https://fivethirtyeight.com/)) talk at Middlebury College on Tuesday February 28th, 2017, including
+<hr>
 
-* Room
-* Exact time in the late afternoon
 
-__Abstract__: Data journalists write stories with data and and stories in data. Andrew Flowers, a journalist and data scientist, will profile six types of data journalism stories: novelty, outlier, archetype, trend, debunking, and forecasting. Several stories will serve as examples, such as p-hacking in nutrition studies, police officer shootings, Uber's effect on taxis, and what local characteristics explain Donald Trump's electoral victory.
 
-<img src="{{BASE_PATH}}/assets/images/ANDREWFLOWERS_fivethirtyeight_headshot.jpeg" width="300">
+<center><img src="flowers_middlebury.png" alt="Drawing" style="width: 700px;"/></center>
 
-Brought to you by the Departments of Mathematics, Political Science, Economics, and the Center for Teaching and Learning.
