@@ -9,8 +9,8 @@ description: Teaching
 
 **Middlebury College**  
 
-* MATH 116 - Introduction to Statistical **and Data** Sciences (new title): [Fall 2016](https://rudeboybert.github.io/MATH116/)
-* MATH 216 - Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/)
+* MATH 116 - Introduction to Statistical **and Data** Sciences: [Spring 2017](https://rudeboybert.github.io/MATH116/)
+* MATH 218 - Statistical Learning: [Spring 2017](https://rudeboybert.github.io/MATH218/)
 
 
 
@@ -19,8 +19,9 @@ description: Teaching
 
 **Middlebury College**  
 
+* MATH 116 - Introduction to Statistical **and Data** Sciences: [Fall 2016](https://rudeboybert.github.io/2016-09-MATH116/)
 * MATH 116 - Introduction to Statistical Science: [Fall 2015](courses/MATH116/2015-09.html)
-* MATH 216 - Introduction to Data Science: [Spring 2016](courses/MATH216/2016-02.html)
+* MATH 216 - Introduction to Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/), [Spring 2016](courses/MATH216/2016-02.html)
 * MATH 311 - Theory of Statistics: [Spring 2016](courses/MATH311/2016-02.html)
 
 **Reed College**
@@ -45,6 +46,18 @@ description: Teaching
 ## Data and Code
 
 The following are data and code for pedagogical purposes.
+
+#### **`fivethirtyeight` R Package**
+
+The `fivethirtyeight` R package of data and code behind the stories and interactives at [FiveThirtyEight](https://fivethirtyeight.com/).
+
+* On [CRAN](https://cran.r-project.org/web/packages/fivethirtyeight/index.html)
+* On [GitHub](https://github.com/rudeboybert/fivethirtyeight)
+
+<img src="{{BASE_PATH}}/assets/images/538.png" width="500">
+
+
+<br>
 
 #### **`resampledata` R Package**
 
