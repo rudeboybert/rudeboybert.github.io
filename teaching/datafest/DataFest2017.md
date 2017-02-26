@@ -36,7 +36,7 @@ target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 
 ## Event Information
 
-* **Who**: Any student with data skills, irregardless of discipline.
+* **Who**: Any student with data skills, regardless of discipline.
 * **When**: Friday April 7th (evening) to Sunday April 9th (afternoon).
 * **Where**: <a target="_blank" class="page-link" href="https://www.google.com/maps/place/Middlebury+College/">Middlebury College</a> in Middlebury, VT.
 * **How do I sign up?** Fill out this <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/1tIZxRyG287lN_o1Er1_SW1zOn2-PYxOI2TV-hgNyLss/edit">Google Form</a>.
