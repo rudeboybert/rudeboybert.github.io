@@ -20,11 +20,12 @@ their results to a panel of judges from local business, academia, and
 government, and have the chance to win prizes. Previous data sources include the
 LAPD, eHarmony.com, Edmunds.com, and Ticketmaster.
 
-* There are more <a
-target="_blank" class="page-link"
-href="https://docs.google.com/spreadsheets/d/12jMbdRrfTdKU9v_TJZl0xmVzChUkXDdqRUSvp-l7Si0/edit">participating colleges</a> this year than ever.
-* See <a target="_blank" class="page-link" href="https://goo.gl/photos/UCRw6VLeGtLrPhLM6">photos</a>
- from the inaugural DataFest Vermont event in 2016 at Saint Michael's College.
+* There are more <a target="_blank" class="page-link" 
+href="https://docs.google.com/spreadsheets/d/12jMbdRrfTdKU9v_TJZl0xmVzChUkXDdqRUSvp-l7Si0/edit">participating
+institutions</a> this year than ever!
+* See <a target="_blank" class="page-link"
+href="https://goo.gl/photos/UCRw6VLeGtLrPhLM6">photos</a> from the inaugural Vermont edition of
+DataFest at Saint Michael's College in Colchester, VT.
 * See the <a target="_blank" class="page-link" href="DataFest2016.html">DataFest 2016</a> page for last year's winners.
 
 <!--
@@ -35,7 +36,6 @@ target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 
 ## Event Information
 
-* **What**: 2017 DataFest Vermont.
 * **Who**: Any student with data skills, irregardless of discipline.
 * **When**: Friday April 7th (evening) to Sunday April 9th (afternoon).
 * **Where**: <a target="_blank" class="page-link" href="https://www.google.com/maps/place/Middlebury+College/">Middlebury College</a> in Middlebury, VT.
@@ -53,18 +53,11 @@ For more information, contact
 * **@University of Vermont**: Prof. Jeff Buzas <a href="mailto:jeff.buzas@uvm.edu ">jeff.buzas@uvm.edu</a>
 
 
-## Middlebury Students
-
-There will be an informational/sign up session:
-
-* **When**: Thursday March 24th at 5pm
-* **Where**: Math Lounge on the third floor of Warner.
-
-
 ## Sponsors
 
-<img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>
-<img src="sponsors/ASA.png" alt="Drawing" style="width: 200px;"/>
+<br>
+
+<img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>   <img src="sponsors/ASA.png" alt="Drawing" style="width: 200px;"/>
 
 <!--
 <img src="sponsors/middlebury.png" alt="Drawing" style="width: 200px;"/>
