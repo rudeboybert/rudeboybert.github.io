@@ -10,11 +10,25 @@ description:
 ![alt text](datafest.jpg)
 
 
-## 2016 Winners of "Best in Show"
+## 2016 Winners
 
-<img src="20160410_145946.jpg" alt="Drawing" style="width: 500px;"/><img src="20160410_162653.jpg" alt="Drawing" style="width: 500px;"/>
+### Best Recommendation
 
+*Awarded to the team with best business recommendation.* Pictured: Matthew Landis (iSciences, judge), Vera Chan, Patrick Tang, Birgitta Cheng.
 
+<img src="photos/best_recommendation.jpg" alt="Drawing" style="width: 600px;"/>
+
+### Best Visualization
+
+*Awarded to the team with best data visualization.* Pictured: Beth Anderson (City of Burlington, judge), Jonah Simon, Christian Lehner, Trisha Singh.
+
+<img src="photos/best_visualization.jpg" alt="Drawing" style="width: 600px;"/>
+
+### Grand Prize: Best in Show
+
+*Awarded to the team with best overall presentation.* Pictured: Jeff Buzas (University of Vermont, judge). Carter Pribis, Nina Sonneborn, Will Henriques, Joy Wood (not pictured).
+
+<img src="photos/best_in_show.jpg" alt="Drawing" style="width: 600px;"/>
 
 ## Sign-Up
 
@@ -24,7 +38,7 @@ following
 as soon as possible.
 
 
-
+<hr>
 
 
 ## What is DataFest?
