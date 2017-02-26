@@ -57,7 +57,8 @@ For more information, contact
 
 <br>
 
-<img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>   <img src="sponsors/ASA.png" alt="Drawing" style="width: 200px;"/>
+<img src="sponsors/ASA.png" alt="Drawing" style="width: 200px;"/>
+<img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>   
 
 <!--
 <img src="sponsors/middlebury.png" alt="Drawing" style="width: 200px;"/>
