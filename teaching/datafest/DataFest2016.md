@@ -73,6 +73,6 @@ For more information, contact Prof. Albert Y. Kim <a href="mailto:aykim@middlebu
 
 ## Sponsors
 
-<img src="google.png" alt="Drawing" style="width: 200px;"/>
-<img src="datacamp.png" alt="Drawing" style="width: 200px;"/>
-<img src="Rstudio.png" alt="Drawing" style="width: 200px;"/>
+<img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>
+<img src="sponsors/datacamp.png" alt="Drawing" style="width: 200px;"/>
+<img src="sponsors/Rstudio.png" alt="Drawing" style="width: 200px;"/>
