@@ -12,7 +12,10 @@ Brought to you by Middlebury <a target="_blank" class="page-link" href="http://w
 
 * **Date/Time**: Tuesday, February 28, 2017 5:30pm
 * **Location**: <a target="_blank" class="page-link" href="https://www.google.com/maps/place/Axinn+Center+at+Starr+Library,+Middlebury,+VT+05753/">Axinn 229</a>
-* **Students Only**: If you are interested in meeting with Andrew Flowers separately, please fill out this <a target="_blank" class="page-link" href="https://docs.google.com/a/middlebury.edu/forms/d/e/1FAIpQLSd6G78kYQPlO9yD9-zRPkdlslR1dfdFhEa0fbD9JB-UmCe3qA/viewform">Google Form</a> (Middlebury login required).
+* **Students Only**: If you are interested in meeting with Andrew Flowers separately, there will be an informal student only Q&A with Andrew at 4:30. Location TBA: Contact Prof Albert Y. Kim for confirmed location.
+
+<!--please fill out this <a target="_blank" class="page-link" href="https://docs.google.com/a/middlebury.edu/forms/d/e/1FAIpQLSd6G78kYQPlO9yD9-zRPkdlslR1dfdFhEa0fbD9JB-UmCe3qA/viewform">Google Form</a> (Middlebury login required).
+-->
 
 <hr>
 
