@@ -18,11 +18,12 @@ Over the course of a weekend, teams of students have to make sense of a large,
 rich, and complex dataset. At the end of the weekend, students will present 
 their results to a panel of judges from local business, academia, and 
 government, and have the chance to win prizes. Previous data sources include the
-LAPD, eHarmony.com, Edmunds.com, and Ticketmaster.
-
-* There are more <a target="_blank" class="page-link" 
+LAPD, eHarmony.com, Edmunds.com, and Ticketmaster. There are more <a target="_blank" class="page-link" 
 href="https://docs.google.com/spreadsheets/d/12jMbdRrfTdKU9v_TJZl0xmVzChUkXDdqRUSvp-l7Si0/edit">participating
 institutions</a> this year than ever!
+
+#### DataFest 2016
+
 * See <a target="_blank" class="page-link"
 href="https://goo.gl/photos/UCRw6VLeGtLrPhLM6">photos</a> from the inaugural Vermont edition of
 DataFest at Saint Michael's College in Colchester, VT.
@@ -65,3 +66,14 @@ For more information, contact
 <img src="datacamp.png" alt="Drawing" style="width: 200px;"/>
 <img src="Rstudio.png" alt="Drawing" style="width: 200px;"/>
 -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92959004-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
