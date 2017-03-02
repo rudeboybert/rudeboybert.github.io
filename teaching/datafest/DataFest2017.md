@@ -51,8 +51,8 @@ For more information, contact
 
 * **@Middlebury College**: Prof. Albert Y. Kim <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a>
 * **@Saint Michael's College**: Prof. Philip Yates <a href="mailto:pyates@smcvt.edu">pyates@smcvt.edu</a>
-* **@University of Vermont**: Prof. Jeff Buzas <a href="mailto:jeff.buzas@uvm.edu ">jeff.buzas@uvm.edu</a>
-
+* **@University of Vermont**: Prof. Jeff Buzas <a href="mailto:jeff.buzas@uvm.edu">jeff.buzas@uvm.edu</a>
+* **@Williams College**: Prof. Brianna Heggeseth <a href="mailto:bch2@williams.edu">bch2@williams.edu</a>
 
 ## Sponsors
 
