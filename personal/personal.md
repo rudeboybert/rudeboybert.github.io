@@ -10,6 +10,9 @@ description: Personal
 * My (very incomplete) [AllTrails](http://www.alltrails.com/members/albert-kim/home) hiking/backcountry profile.
 * I like beer; check out my
 [Untappd](https://untappd.com/user/rudeboybert) profile for my ratings.
+* [Salut mon Ron!](http://www.985sports.ca/em/bonsoir-les-sportifs-1.html)
+
+
 
 
 
