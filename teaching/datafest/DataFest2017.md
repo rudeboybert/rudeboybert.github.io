@@ -18,11 +18,12 @@ Over the course of a weekend, teams of students have to make sense of a large,
 rich, and complex dataset. At the end of the weekend, students will present 
 their results to a panel of judges from local business, academia, and 
 government, and have the chance to win prizes. Previous data sources include the
-LAPD, eHarmony.com, Edmunds.com, and Ticketmaster.
-
-* There are more <a target="_blank" class="page-link" 
+LAPD, eHarmony.com, Edmunds.com, and Ticketmaster. There are more <a target="_blank" class="page-link" 
 href="https://docs.google.com/spreadsheets/d/12jMbdRrfTdKU9v_TJZl0xmVzChUkXDdqRUSvp-l7Si0/edit">participating
 institutions</a> this year than ever!
+
+#### DataFest 2016
+
 * See <a target="_blank" class="page-link"
 href="https://goo.gl/photos/UCRw6VLeGtLrPhLM6">photos</a> from the inaugural Vermont edition of
 DataFest at Saint Michael's College in Colchester, VT.
@@ -39,7 +40,6 @@ target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 Fill out this <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/1tIZxRyG287lN_o1Er1_SW1zOn2-PYxOI2TV-hgNyLss/edit">Google Form</a>.
 
 
-
 ## Event Information
 
 * **Who**: Any student with data skills, regardless of discipline.
@@ -50,12 +50,12 @@ There will be information sessions:
 
 * **@Middlebury College**: Thursday March 16th at 5pm in Warner Hall 203.
 
-
 For more information, contact
 
 * **@Middlebury College**: Prof. Albert Y. Kim <a href="mailto:aykim@middlebury.edu">aykim@middlebury.edu</a>
 * **@Saint Michael's College**: Prof. Philip Yates <a href="mailto:pyates@smcvt.edu">pyates@smcvt.edu</a>
-* **@University of Vermont**: Prof. Jeff Buzas <a href="mailto:jeff.buzas@uvm.edu ">jeff.buzas@uvm.edu</a>
+* **@University of Vermont**: Prof. Jeff Buzas <a href="mailto:jeff.buzas@uvm.edu">jeff.buzas@uvm.edu</a>
+* **@Williams College**: Prof. Brianna Heggeseth <a href="mailto:bch2@williams.edu">bch2@williams.edu</a>
 
 ## Judges
 
@@ -63,7 +63,6 @@ We've received commitments from the following individuals to be judges:
 
 * Polly Mangan: <a target="_blank" class="page-link" href="https://www.linkedin.com/in/polly-ramsey-mangan-a0bb6090/">Data Scientist</a> at Dealer.com
 * Beth Anderson: <a target="_blank" class="page-link" href="http://www.sevendaysvt.com/OffMessage/archives/2015/05/14/burlington-mayor-appoints-chief-innovation-officer">Chief Innovation Officer</a> for the City of Burlington VT
-
 
 
 
@@ -80,3 +79,14 @@ We've received commitments from the following individuals to be judges:
 <img src="datacamp.png" alt="Drawing" style="width: 200px;"/>
 <img src="Rstudio.png" alt="Drawing" style="width: 200px;"/>
 -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92959004-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
