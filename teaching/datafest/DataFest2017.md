@@ -73,6 +73,7 @@ We've received commitments from the following individuals to be judges:
 
 <img src="sponsors/ASA.png" alt="Drawing" style="width: 200px;"/>
 <img src="sponsors/google.png" alt="Drawing" style="width: 200px;"/>   
+<img src="sponsors/DataCamp2017.png" alt="Drawing" style="width: 200px;"/>    
 
 <!--
 <img src="sponsors/middlebury.png" alt="Drawing" style="width: 200px;"/>
