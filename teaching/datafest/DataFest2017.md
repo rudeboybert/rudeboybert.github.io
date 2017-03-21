@@ -35,9 +35,11 @@ href="http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jo
 target="_blank">FiveThirtyEight.com article</a> on the 2014 edition.
 -->
 
-## Sign-Up Form
+## Sign-Up Form & Slack Group
 
-Fill out this <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/1tIZxRyG287lN_o1Er1_SW1zOn2-PYxOI2TV-hgNyLss/edit">Google Form</a>.
+* Fill out this <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/1tIZxRyG287lN_o1Er1_SW1zOn2-PYxOI2TV-hgNyLss/edit">Google Form</a>.
+* We will then add you to the DataFest Vermont 2017 <a target="_blank" class="page-link" href="https://datafestvermont2017.slack.com">Slack Team</a>. Bookmark this page (or install the Slack <a target="_blank" class="page-link" href="https://slack.com/downloads/">app</a>) and check-in periodically for announcements leading up to the opening event on Friday April 7th 6pm at <a target="_blank" class="page-link" href="https://www.google.com/maps/place/Axinn+Center+at+Starr+Library,+Middlebury,+VT+05753/">Axinn Center 229</a>. 
+
 
 
 ## Event Information
