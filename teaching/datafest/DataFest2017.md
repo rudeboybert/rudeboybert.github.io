@@ -65,7 +65,8 @@ We've received commitments from the following individuals to be judges:
 
 * Polly Mangan: <a target="_blank" class="page-link" href="https://www.linkedin.com/in/polly-ramsey-mangan-a0bb6090/">Data Scientist</a> at Dealer.com
 * Beth Anderson: <a target="_blank" class="page-link" href="http://www.sevendaysvt.com/OffMessage/archives/2015/05/14/burlington-mayor-appoints-chief-innovation-officer">Chief Innovation Officer</a> for the City of Burlington VT
-
+* Matt Landis: <a target="_blank" class="page-link" href="https://www.linkedin.com/in/matthewlandis/">Data Scientist</a> at ISciences
+* Philip Yates: <a target="_blank" class="page-link" href="http://www.smcvt.edu/pages/get-to-know-us/faculty/yates-philip.aspx">Associate Professor of Statistics</a> at Saint Michael's College
 
 
 
