@@ -130,13 +130,13 @@ LINK TO DOCUMENT
 1. Complete reproducibility
 
 
-
+<!--
 ## 1) Data First!
 
 Actual dialogue I had with a student:
 
 ![](figure/dialogue_1.png)
-
+-->
 
 
 ## 1) Data First!
@@ -160,13 +160,16 @@ Furthermore use data science tools **that a data scientist would use**. Example:
 <center><img src="figure/tidyverse.png" height="300px"/></center>
 
 
+
 ## 1) Data First!
 
 What does this buy us?
 
+* Students can do effective data-story telling
 * Context for asking scientific questions
 * Look at data that's rich, real, and realistic. Examples: Data packages such as [`nycflights13`](https://github.com/hadley/nycflights13) and [`fivethirtyeight`](https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html)
 * Better motivate traditional statistical topics
+
 
 
 ## 2) Computers, Not Math!
@@ -220,6 +223,7 @@ Why should we do this?
 * Data science and machine learning.
 * Where statistics is heading. Gelman [blog post](http://andrewgelman.com/2017/05/14/computer-programming-prerequisite-learning-statistics/).
 * Many new tools, like DataCamp, allow us to outsource many less interesting topics to teach.
+* We are doing a disservice to students by shielding them from these ideas.
 * Bigger picture:
     + Coding is becoming a basic skill like reading and writing.
     + Data analysis, as opposed to algorithms and data structures, could attract more students from traditionally underrepresented groups.
@@ -278,7 +282,7 @@ Outsource many essential but not fun to teach topics like
 * Outsourcing allows you to free up class time
 * With their [free academic license](https://www.datacamp.com/groups/education), you can
     + Form class "Groups" and assign/track progress of courses
-    + Have access to ALL [their courses](https://www.datacamp.com/courses)
+    + Have access to ALL [their courses](https://www.datacamp.com/courses), including `ggplot2`, `dplyr`, `RMarkdown`, and RStudio IDE.
 
 
 ## DataCamp Cons
@@ -289,7 +293,7 @@ Outsource many essential but not fun to teach topics like
 
 ## DataCamp Conclusion
 
-* Not a good tool for retention, but for introduction
+* Not a good tool for quick retention, but for introduction and subsequent repetition.
 * [Feedback](https://docs.google.com/spreadsheets/d/1qUwt-v-xAQJ-1OTzMI2Q27McXG_3yXO5Qe9p-jz6BA8/edit) from students was positive.
 * Battle is more psychological than anything. DataCamp reinforces to students that
     + "Computers are stupid!"
@@ -312,7 +316,15 @@ Outsource many essential but not fun to teach topics like
 <!----------------------------------------------------------------------------->
 # Inference
 
-## Chapter 7: Regression Highlights
+## Chapter 6: Sampling Highlights
+
+## Chapter 7: Hypothesis Testing Highlights
+
+## Chapter 8: Confidence Intervals Highlights
+
+
+
+## Chapter 9: Regression Highlights
 
 1. Experience with `ggplot2` package and knowledge of the Grammar of Graphics primes students for regression
 1. Use of the `broom` package to unpack regression
@@ -467,11 +479,16 @@ ggplot(data = regression_points, mapping = aes(sample = .resid)) +
 
 
 # Preview of Multiple Regression-----------------------------------------------
-alaska_flights <- alaska_flights %>% 
-  mutate(summer = month == 6 | month == 7 | month == 8)
-ggplot(data = alaska_flights, mapping = aes(x = dep_delay, y = arr_delay, col=summer)) + 
+flights_subset <- flights %>% 
+  filter(carrier == "AS" | carrier == "F9") %>% 
+  left_join(weather, by=c("year", "month", "day", "hour", "origin")) %>% 
+  filter(dep_delay < 250) %>% 
+  mutate(summer = ifelse(month == 6 | month == 7 | month == 8, "Summer Flights", "Non-Summer Flights"))
+
+ggplot(data = flights_subset, mapping = aes(x = temp, y=dep_delay, col=carrier)) + 
   geom_point() +
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~summer)
 ```
 
 
