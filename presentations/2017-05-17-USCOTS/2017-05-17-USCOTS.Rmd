@@ -31,7 +31,7 @@ slides > slide:not(.nobackground):after {
 </style>
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width=8, fig.height=4.5)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.width=8, fig.height=4.5)
 if(FALSE){
   # Run this to render slides as HTML document:
   rmarkdown::render("2017-05-17-USCOTS.Rmd", output_format = c("html_document"))
@@ -49,9 +49,22 @@ library(knitr)
 <!----------------------------------------------------------------------------->
 # Introduction
 
+## Who We Are
+
+* [Chester Ismay](https://ismayc.github.io/): Reed College & Pacific University
+    + Email: 
+    + GitHub: [`ismayc`](https://github.com/ismayc)
+    + Twitter: [`@old_man_chester`](https://twitter.com/old_man_chester)
+* [Albert Y. Kim](http://rudeboybert.github.io/): Middlebury College
+    + Email: <albert.ys.kim@gmail.com>
+    + GitHub: [`rudeboybert`](https://github.com/rudeboybert)
+    + Twitter: [`@rudeboybert`](https://twitter.com/rudeboybert)
+
+
+
 ## Outline of Workshop
 
-* 
+LINK TO DOCUMENT
 
 
 ## Our Textbook
@@ -60,6 +73,7 @@ library(knitr)
 
 * *An Introduction to Statistical and Data Sciences via R*
 * Webpage: <http://moderndive.com>. [GitHub Repo](https://github.com/ismayc/moderndiver-book)
+* In you haven't already, please [signup](http://moderndive.us15.list-manage2.com/subscribe?u=87888fab720da90906427a5be&id=0c9e2d1df2) for our mailing list!
 
 
 ## ModernDive and Our Syllabi
@@ -70,22 +84,13 @@ library(knitr)
 
 
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-# Context & Background
-
 ## Albert's Course
 
 * Introduction to Statistical & Data Sciences: [Webpage](https://rudeboybert.github.io/MATH116/) and [GitHub Repo](https://github.com/rudeboybert/MATH116)
 * Administrative:
     + Chief non-econ/bio stats service class at Middlebury
     + 12 weeks each with 3h "lecture" + 1h "lab"
+    + **No prerequisites**
 * Students:
     + ~24 students/section of all years/backgrounds. Only stats class many will take
     + Background: Many had AP stats, some with programming
@@ -117,9 +122,7 @@ library(knitr)
 * 
 
 
-## What is Different?
-
-What are we doing that's different and why?
+## What Are We Doing And Why?
 
 1. Data first! Start with data science via `tidyverse`, then stats.
 1. Replacing the **mathematical/analytic** with **computational/simulation-based** whenever possible.
@@ -250,12 +253,267 @@ Insert appropriate image
 <!----------------------------------------------------------------------------->
 # Getting Started
 
-## R
+## DataCamp
 
-* Chester's Book: Ask how he wants it pitched
-* DataCamp: Intro to R
+DataCamp offers an interactive, browser based tool for learning R/Python. Their
+two flagship R courses, both of which are free:
+
+* [Intro to R](https://www.datacamp.com/courses/free-introduction-to-r) 
+* [Intermediate R](https://www.datacamp.com/courses/intermediate-r-practice) courses
 
 
-## RStudio vs RStudio Server
+## DataCamp
+
+Outsource many essential but not fun to teach topics like
+
+* Idea of command-line vs point-and-click
+* Syntax: Variable names typed exactly, parentheses matching
+* Algorithmic Thinking: Linearity of code, object assignment
+* Computational Logic: boolean algebra, conditional statements, functions
+
+
+## DataCamp Pros
+
+* Can assign "Intro to R" very first day of class as "Homework 0"
+* Outsourcing allows you to free up class time
+* With their [free academic license](https://www.datacamp.com/groups/education), you can
+    + Form class "Groups" and assign/track progress of courses
+    + Have access to ALL [their courses](https://www.datacamp.com/courses)
+
+
+## DataCamp Cons
+
+* Some students will still have trouble; you can identify them however.
+* The topics in these two courses may not align with your syllabus. You can assign at chapter level instead of course level
+
+
+## DataCamp Conclusion
+
+* Not a good tool for retention, but for introduction
+* [Feedback](https://docs.google.com/spreadsheets/d/1qUwt-v-xAQJ-1OTzMI2Q27McXG_3yXO5Qe9p-jz6BA8/edit) from students was positive.
+* Battle is more psychological than anything. DataCamp reinforces to students that
+    + "Computers are stupid!"
+    + "Learning to code is like learning a foreign language!"
+
+
+## Chester's First Bookdown Project
+
+[Getting used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/)
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+# Inference
+
+## Chapter 7: Regression Highlights
+
+1. Experience with `ggplot2` package and knowledge of the Grammar of Graphics primes students for regression
+1. Use of the `broom` package to unpack regression
+
+
+
+## 1. `ggplot2` Primes Regression
+
+* REPEAT WHATEVER PHRASE CHESTER USED TO SAY THAT GRAMMAR FOCUSES ON **RELATIONSHIPS**
+BETWEEN VARIABLES
+* This ultimately what regression is about!
+
+
+## 1. `ggplot2` Primes Regression
+
+Example:
+
+* For all Alaskan Airlines and Frontier flights leaving NYC in 2013
+* We want to study the relationship between temperature and departure delay
+* For summer (June, July, August) and non-summer months separately
+
+This involves four variables `carrier`, `temp`, `dep_delay`, `summer`
+
+## 1. `ggplot2` Primes Regression
+
+```{r, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(nycflights13)
+
+flights_subset <- flights %>% 
+  filter(carrier == "AS" | carrier == "F9") %>% 
+  left_join(weather, by=c("year", "month", "day", "hour", "origin")) %>% 
+  filter(dep_delay < 250) %>% 
+  mutate(summer = ifelse(month == 6 | month == 7 | month == 8, "Summer Flights", "Non-Summer Flights"))
+
+ggplot(data = flights_subset, mapping = aes(x = temp, y=dep_delay, col=carrier)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~summer)
+```
+
+## 1. `ggplot2` Primes Regression
+
+Why? Dig deeper into data. Look at `origin` and `dest` variables as well:
+
+```{r, echo=FALSE}
+flights_subset %>% 
+  group_by(carrier, origin, dest) %>% 
+  summarise(`Number of Flights` = n()) %>% 
+  kable(digits=3)
+```
+
+
+
+
+## 2. `broom` Package
+
+* The `broom` package takes the messy output of built-in functions in R, such as
+`lm`, `nls`, or `t.test`, and turns them into tidy data frames.
+* Fits in with `tidyverse` ecosystem
+* This works for [many R data types](https://github.com/tidyverse/broom#available-tidiers)!
+
+
+
+## 2. `broom` Package
+
+In our case, `broom` functions take `lm` objects as inputs and return the following in tidy format!
+
+* `tidy()`: regression output table
+* `augment()`: point-by-point values (fitted values, residuals, predicted values)
+* `glance()`: scalar summaries like $R^2$, 
+
+
+
+## 2. `broom` Package
+
+The chapter will be built around this code:
+
+```{r, eval=FALSE}
+library(ggplot2)
+library(dplyr)
+library(nycflights13)
+library(knitr)
+library(broom)
+set.seed(2017)
+
+# Load Alaska data, deleting rows that have missing departure delay
+# or arrival delay data
+alaska_flights <- flights %>% 
+  filter(carrier == "AS") %>% 
+  filter(!is.na(dep_delay) & !is.na(arr_delay)) %>% 
+  sample_n(50)
+View(alaska_flights)
+
+
+# Exploratory Data Analysis----------------------------------------------------
+# Plot of sample of points:
+ggplot(data = alaska_flights, mapping = aes(x = dep_delay, y = arr_delay)) + 
+   geom_point()
+
+# Correlation coefficient:
+alaska_flights %>% 
+  summarize(correl = cor(dep_delay, arr_delay))
+
+# Add regression line
+ggplot(data = alaska_flights, mapping = aes(x = dep_delay, y = arr_delay)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red")
+
+
+# Fit Regression and Study Output with broom Package---------------------------
+# Fit regression
+delay_fit <- lm(formula = arr_delay ~ dep_delay, data = alaska_flights)
+
+# 1. broom::tidy() regression table with confidence intervals and no p-value stars
+regression_table <- delay_fit %>% 
+  tidy(conf.int=TRUE)
+regression_table %>% 
+  kable(digits=3)
+
+# 2. broom::augment() for point-by-point values
+regression_points <- delay_fit %>% 
+  augment() %>% 
+  select(arr_delay, dep_delay, .fitted, .resid) 
+regression_points %>% 
+  head() %>% 
+  kable(digits=3)
+
+# and for prediction
+new_flights <- data_frame(dep_delay = c(25, 30, 15))
+delay_fit %>% 
+  augment(newdata = new_flights) %>% 
+  kable()
+
+# 3. broom::glance() scalar summaries of regression
+regression_summaries <- delay_fit %>% 
+  glance() 
+regression_summaries %>% 
+  kable(digits=3)
+
+
+# Residual Analysis------------------------------------------------------------
+ggplot(data = regression_points, mapping = aes(x = .resid)) +
+  geom_histogram(binwidth=10) +
+  geom_vline(xintercept = 0, color = "blue")
+ggplot(data = regression_points, mapping = aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_abline(intercept = 0, slope = 0, color = "blue")
+ggplot(data = regression_points, mapping = aes(sample = .resid)) +
+  stat_qq()
+
+
+# Preview of Multiple Regression-----------------------------------------------
+alaska_flights <- alaska_flights %>% 
+  mutate(summer = month == 6 | month == 7 | month == 8)
+ggplot(data = alaska_flights, mapping = aes(x = dep_delay, y = arr_delay, col=summer)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+# The Future
+
+## The Immediate Future
+
+By July 1st, 2017
+
+* Complete Development of Chapters 6-9 on Simulations, Hypothesis Testing, Confidence Intervals, and Regression
+* Learning Checks: Discussion/solutions embedded directly in the textbook, that you can reveal progressively.
+* Have better [data frame printing](http://rmarkdown.rstudio.com/html_document_format.html#data_frame_printing). Instead of raw R code use
+    + Less jarring `knitr::kable()` output or
+    + Interactive table outputs, to replicate RStudio's `View()` function.
+
+
+
+## The Longer Term
+
+* In Chapter 7: Regression
+    + Add more on categorical predictors
+    + Multiple regression
+* 
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
 
 
