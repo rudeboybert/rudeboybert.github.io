@@ -3,9 +3,9 @@ title: "USCOTS 2017: A Fully Customizable Textbook for Intro Stats/Data Science"
 author: "Chester Ismay & Albert Y. Kim"
 date: "2017-05-17"
 output:
-  # ioslides_presentation:
-  #   df_print: kable
-  #   incremental: false
+  ioslides_presentation:
+    df_print: kable
+    incremental: false
   html_document:
     toc: true
     toc_float: true
@@ -162,10 +162,11 @@ Furthermore use data science tools **that a data scientist would use**. Example:
 What does this buy us?
 
 * Context for asking scientific questions
-* 
+* Look at data that's rich, real, and realistic. Examples: Data packages such as [`nycflights13`](https://github.com/hadley/nycflights13) and [`fivethirtyeight`](https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html)
+* Better motivate traditional statistical topics
 
 
-## 2) Math vs Computers
+## 2) Computers, Not Math!
 
 Cobb ([TAS 2015](https://arxiv.org/abs/1507.05346)): Two possible "computational
 engines" for statistics, in particular relating to sampling:
@@ -174,7 +175,7 @@ engines" for statistics, in particular relating to sampling:
 > * Computers: simulations, resampling methods
 
 
-## 2) Math vs Computers
+## 2) Computers, Not Math!
 
 We present students with a choice for our "engine":
 
@@ -188,18 +189,48 @@ Either we use this...            |  Or we use this...
 > * Leave "bread crumbs" for more advanced math/stats courses
 
 
-## 2) Math vs Computers
+## 2) Computers, Not Math!
+
+What does this buy us?
+
+* Emphasizes: stats is not math, rather stats uses math.
+* Simulations are more tactile
+* Reducing probability and march to CLT, this frees up space in syllabus.
+
+
+## 3) Algorithms, Computation, & Coding
+
+* Both "Data First!" and "Computers, Not Math!" necessitate algorithmic thinking, computational logic and some coding/programming.
+* Battle is more psychological than anything:
+    + "This is not a class on programming!"
+    + "Computers are stupid!"
+    + "Learning to code is like learning a foreign language!"
+    + "Early on don't code from scratch! Take something else that's similar and tweak it!"
+    + Learning how to Google effectively
 
 
 
 ## 3) Algorithms, Computation, & Coding
 
+Why should we do this?
+
+* Data science and machine learning.
+* Where statistics is heading. Gelman [blog post](http://andrewgelman.com/2017/05/14/computer-programming-prerequisite-learning-statistics/).
+* Many new tools, like DataCamp, allow us to outsource many less interesting topics to teach.
+* Bigger picture:
+    + Coding is becoming a basic skill like reading and writing.
+    + Data analysis, as opposed to algorithms and data structures, could attract more students from traditionally underrepresented groups.
 
 
 
-## 4) 
+## 4) Complete Reproducibility
 
-
+* Students learn best when they can take can apart a toy (analysis) and then rebuild it (synthesis).
+* Crisis in Reproducibility
+* Ultimately the best textbook is one you've written yourself.
+    + Everyone has different contexts, backgrounds, needs
+    + Hard to find one-size-fits-all solutions
+* A new paradigm in textbooks? [Versions, not editions?](https://twitter.com/rudeboybert/status/820032345759592448)
 
 
 
