@@ -1,0 +1,230 @@
+---
+title: "USCOTS 2017: A Fully Customizable Textbook for Intro Stats/Data Science"
+author: "Chester Ismay & Albert Y. Kim"
+date: "2017-05-17"
+output:
+  # ioslides_presentation:
+  #   df_print: kable
+  #   incremental: false
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 1
+    theme: cosmo
+    highlight: tango
+    df_print: paged
+    pandoc_args: [
+      "--output=2017-05-17-USCOTS_document.html"
+    ]
+---
+
+<style>
+h1{font-weight: bold;}
+h2{color: #3399ff;}
+h3{color: #3399ff;}
+slides slide.backdrop {background: white;}
+</style>
+<style type="text/css">
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width=8, fig.height=4.5)
+if(FALSE){
+  # Run this to render slides as HTML document:
+  rmarkdown::render("2017-05-17-USCOTS.Rmd", output_format = c("html_document"))
+}
+```
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(mosaic)
+library(stringr)
+library(okcupiddata)
+library(knitr)
+```
+
+<!----------------------------------------------------------------------------->
+# Introduction
+
+## Outline of Workshop
+
+* 
+
+
+## Our Textbook
+
+<img src="figure/moderndive-logo.png" height="75px"/>
+
+* *An Introduction to Statistical and Data Sciences via R*
+* Webpage: <http://moderndive.com>. [GitHub Repo](https://github.com/ismayc/moderndiver-book)
+
+
+## ModernDive and Our Syllabi
+
+> * ModernDive's guiding philosophies are deeply intertwined our syllabi
+> * Hard to speak of ModernDive in isolation from syllabi and vice-versa
+> * Numbers are numbers, but data has context...
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+# Context & Background
+
+## Albert's Course
+
+* Introduction to Statistical & Data Sciences: [Webpage](https://rudeboybert.github.io/MATH116/) and [GitHub Repo](https://github.com/rudeboybert/MATH116)
+* Administrative:
+    + Chief non-econ/bio stats service class at Middlebury
+    + 12 weeks each with 3h "lecture" + 1h "lab"
+* Students:
+    + ~24 students/section of all years/backgrounds. Only stats class many will take
+    + Background: Many had AP stats, some with programming
+    + All had laptops that they brought everyday
+
+
+## Albert's Syllabus
+
+* [Topic List](https://rudeboybert.github.io/MATH116/)
+    + **First half is data science**: data visualization, manipulation, importing
+    + **Second half is intro stats**: sampling, hypothesis tests, CI, regression
+* Evaluation
+    + 10%: weekly problem sets
+    + 10%: engagement
+    + 45%: 3 midterms (last during finals week)
+    + **35%: [Final projects](https://rudeboybert.github.io/MATH116/PS/final_project/final_project_outline.html#learning_goals)**
+
+
+## Albert's Typical Classtime
+
+* First 10-15min: Priming topic, either via slides or **chalk talk**
+* Remainder: Students read over text & do **Learning Checks** in groups and without direct instructor guidance. 
+
+<center><img src="figure/group_1.jpg" width="400px"/></center>
+
+
+## Chester: Social Statistics 
+
+* 
+
+
+## What is Different?
+
+What are we doing that's different and why?
+
+1. Data first! Start with data science via `tidyverse`, then stats.
+1. Replacing the **mathematical/analytic** with **computational/simulation-based** whenever possible.
+1. The above necessitates algorithmic thinking, computational logic and some coding/programming.
+1. Complete reproducibility
+
+
+
+## 1) Data First!
+
+Actual dialogue I had with a student:
+
+![](figure/dialogue_1.png)
+
+
+
+## 1) Data First!
+
+Cobb ([TAS 2015](https://arxiv.org/abs/1507.05346)): *Minimizing prerequisites to research*. In other words, focus on entirety of Wickham/Grolemund's pipeline...
+
+![](figure/pipeline.png)
+
+
+## 1) Data First!
+
+... and not just this part. 
+
+![](figure/pipeline2.png)
+
+
+## 1) Data First!
+
+Furthermore use data science tools **that a data scientist would use**. Example: [`tidyverse`](http://tidyverse.org/)
+
+<center><img src="figure/tidyverse.png" height="300px"/></center>
+
+
+## 1) Data First!
+
+What does this buy us?
+
+* Context for asking scientific questions
+* 
+
+
+## 2) Math vs Computers
+
+Cobb ([TAS 2015](https://arxiv.org/abs/1507.05346)): Two possible "computational
+engines" for statistics, in particular relating to sampling:
+
+> * Mathematics: formulas, probability theory, large-sample approximations, central limit theorem
+> * Computers: simulations, resampling methods
+
+
+## 2) Math vs Computers
+
+We present students with a choice for our "engine":
+
+Either we use this...            |  Or we use this...
+:-------------------------:|:-------------------------:
+<img src="figure/formulas.png" alt="Drawing" style="width: 300px;"/>   |  <img src="figure/coding.jpg" alt="Drawing" style="width: 300px;"/> 
+
+<br>
+
+> * Almost all are thrilled to do latter
+> * Leave "bread crumbs" for more advanced math/stats courses
+
+
+## 2) Math vs Computers
+
+
+
+## 3) Algorithms, Computation, & Coding
+
+
+
+
+## 4) 
+
+
+
+
+
+## Let's Dive In!
+
+Insert appropriate image
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+# Getting Started
+
+## R
+
+* Chester's Book: Ask how he wants it pitched
+* DataCamp: Intro to R
+
+
+## RStudio vs RStudio Server
+
+
