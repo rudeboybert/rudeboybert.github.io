@@ -15,7 +15,7 @@ Biology Department at Middlebury College.
 
 #### **Data & Code**
 
-* [Shiny app of tree plot](https://shiny.middlebury.edu:3838/aykim/Focal_Trees/) 
+* [Shiny app of tree plot](https://beta.rstudioconnect.com/connect/#/apps/2828/) 
 (takes about 10 seconds to load).
 
 
