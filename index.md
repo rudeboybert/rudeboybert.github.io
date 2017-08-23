@@ -9,7 +9,7 @@ description: Albert Y. Kim's Webpage
 
 I am a Lecturer in Statistics in the
 [Mathematics & Statistics Department](https://www.amherst.edu/academiclife/departments/mathematics-statistics/) at
-[Middlebury College](https://www.amherst.edu/).  Born in Montreal Quebec,
+[Amherst College](https://www.amherst.edu/).  Born in Montreal Quebec,
 I earned my BSc in Mathematics and Computer Science from
 [McGill University](http://www.mcgill.ca/) in 2004 and my PhD in Statistics from
 the [University of Washington](http://www.uw.edu/) in 2011.  Prior to joining
@@ -38,8 +38,8 @@ division of Google Inc, a Visiting Assistant Professor of Statistics at
 
 **Phone**: +1.413.542.5859 (no voicemails please, emails preferred)  
 **Office**: [Converse Hall 316](https://www.google.com/maps/place/Amherst+College+Converse+Hall/@42.3723643,-72.5184167,15z/data=!4m5!3m4!1s0x0:0x63162cb2397551a2!8m2!3d42.3723643!4d-72.5184167)  
-**Mailing Address**:
-202 Seeley Mudd Building
-31 Quadrangle
-Amherst, MA
+**Mailing Address**:  
+202 Seeley Mudd Building  
+31 Quadrangle  
+Amherst, MA  
 01002
