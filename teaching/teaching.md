@@ -7,10 +7,10 @@ description: Teaching
 
 ## Current Courses
 
-**Middlebury College**  
+**Amherst College**  
 
-* MATH 116 - Introduction to Statistical **and Data** Sciences: [Spring 2017](https://rudeboybert.github.io/MATH116/)
-* MATH 218 - Statistical Learning: [Spring 2017](https://rudeboybert.github.io/MATH218/)
+* STAT 135 - Introduction to Statistics via Modeling: [Fall 2017](https://rudeboybert.github.io/STAT135/)
+* STAT 495 - Advanced Data Analysis: [Fall 2017](https://rudeboybert.github.io/STAT495/)
 
 
 
@@ -19,9 +19,10 @@ description: Teaching
 
 **Middlebury College**  
 
-* MATH 116 - Introduction to Statistical **and Data** Sciences: [Fall 2016](https://rudeboybert.github.io/2016-09-MATH116/)
+* MATH 116 - Introduction to Statistical and Data Sciences: [Spring 2017](https://rudeboybert.github.io/MATH116/), [Fall 2016](https://rudeboybert.github.io/2016-09-MATH116/)
 * MATH 116 - Introduction to Statistical Science: [Fall 2015](courses/MATH116/2015-09.html)
 * MATH 216 - Introduction to Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/), [Spring 2016](courses/MATH216/2016-02.html)
+* MATH 218 - Statistical/Machine Learning: [Spring 2017](https://rudeboybert.github.io/MATH218/)
 * MATH 311 - Theory of Statistics: [Spring 2016](courses/MATH311/2016-02.html)
 
 **Reed College**
@@ -85,22 +86,25 @@ from OkCupid and usernames were not included in the data set.
 
 <br>
 
+
+<!--
 #### **Reed College Jukebox Data**
 
 All songs played on the [Reed College](http://www.reed.edu) jukebox located in
 the pool room of the Commons building between November 30, 2003 and January 22,
-2009.  The data was generously provided by [Noah Pepper 
+2009. The data was generously provided by [Noah Pepper 
 '09](http://www.noahpepper.com/). The original data and code to generate a Shiny
 webapp are available on [GitHub](https://github.com/rudeboybert/ReedJukebox).
 
 <img src="{{BASE_PATH}}/assets/images/pool_hall.jpg" width="250">
-
+-->
 
 <hr>
 
 
-## Tutorials
+## Tutorials & Workshops
 
+* 2017-05 [USCOTS](https://www.causeweb.org/cause/uscots/uscots17/) State College PA: [A Fully Customizable Textbook for Introductory Statistics/Data Science Courses](https://www.causeweb.org/cause/uscots/uscots17/workshop/3)
 * 2015 Reed College Paideia: Data Science and Visualization with [Rich Majerus](https://www.colby.edu/directory/profile/richard.majerus/): [Slides](http://htmlpreview.github.io/?https://github.com/majerus/paideia_reed_college/blob/master/data_science_and_visualization/slides.html#1) and [Code](https://github.com/majerus/paideia_reed_college/tree/master/data_science_and_visualization).
 * 2014 & 2015 Reed College Paideia: R for Beginners with [Kristin Bott](http://www.reed.edu/cis/about/staff/bott.html): [Slides](https://docs.google.com/presentation/d/1OLnmr4vAY5p91hf9QU5Mhmot4sQnBV886beVmcRjDyA/edit?usp=sharing) and [Code](https://github.com/majerus/paideia_reed_college/tree/master/R_for_beginners).
 
@@ -115,7 +119,7 @@ internationally coordinated undergraduate data analysis hackathon.
     + Along with Prof. Philip Yates I co-organized the inaugural [Vermont 802
     DataFest](datafest/datafest.html) at Saint Michael's College on April 8-10,
     2016.
-    + I was a judge at the 2016 [Five College
+    + I was a judge at the 2016 & 2017 [Five College
     DataFest](http://www.science.smith.edu/datafest/) (UMass Amherst, Smith,
     Mount Holyoke, Amherst, Hampshire colleges) in Western Massachusetts.
 * **OpenIntro Statistics**: I am a [contributing

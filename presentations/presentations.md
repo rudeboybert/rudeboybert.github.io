@@ -6,6 +6,11 @@ description: Presentations
 
 A list of some recent presentations.
 
+### **2017**
+
+* **2017/08/10** ["Estimating species-specific competition coefficients with a Bayesian hierarchical model of the neighborhood effect of competition on tree growth"](2017-08-10-esaTalk.pdf) (with Prof. David Allen): Ecological Society of America 2017 Annual Meeting, Portland OR.
+
+
 ### **2016**
 
 * **2016/11/08** - ["The Statistical Modeling of Interspecies Competition on the Growth of Trees"](http://rpubs.com/rudeboybert/Tree): Middlebury College Math Colloquium.

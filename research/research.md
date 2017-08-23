@@ -11,7 +11,7 @@ description: Research
 I've developed a recent interest in forest ecology, in particular the interspecies 
 competition model of Canham et al (2004), collaborating with [Prof. David
 Allen](http://www.middlebury.edu/academics/bio/faculty/node/352418) in the
-Biology Department at Middlebury College.
+Biology Department at Middlebury College (See Presentations -> 2017-08-10 ESA).
 
 #### **Data & Code**
 
@@ -99,8 +99,7 @@ underneath the University Bridge in Seattle WA.
 <hr>
 
 
-<!--
+
 ## Curriculum Vitae
 
-Click [here](CV/Kim_CV.pdf) for my CV.
--->
+Click [here](./CV/Kim_CV.pdf) for my curriculum vitae.
