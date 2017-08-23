@@ -102,4 +102,4 @@ underneath the University Bridge in Seattle WA.
 
 ## Curriculum Vitae
 
-Click [here](./CV/Kim_CV.pdf) for my curriculum vitae.
+Click [here](CV/Kim_CV.pdf) for my curriculum vitae.
