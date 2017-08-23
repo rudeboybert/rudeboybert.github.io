@@ -1,21 +1,21 @@
 ---
 layout: page
 title: Albert Y. Kim
-tagline: Assistant Professor of Statistics
+tagline: Lecturer in Statistics
 description: Albert Y. Kim's Webpage
 ---
 
 ## Biography
 
-I am an Assistant Professor of Statistics in the
-[Mathematics Department](http://www.middlebury.edu/academics/math/) at
-[Middlebury College](http://www.middlebury.edu/).  Born in Montreal Quebec,
+I am a Lecturer in Statistics in the
+[Mathematics & Statistics Department](https://www.amherst.edu/academiclife/departments/mathematics-statistics/) at
+[Middlebury College](https://www.amherst.edu/).  Born in Montreal Quebec,
 I earned my BSc in Mathematics and Computer Science from
 [McGill University](http://www.mcgill.ca/) in 2004 and my PhD in Statistics from
 the [University of Washington](http://www.uw.edu/) in 2011.  Prior to joining
-Middlebury College, I was a Decision Support Engineering Analyst in the AdWords
-division of Google Inc and a Visiting Assistant Professor of Statistics at
-[Reed College](http://www.reed.edu/).  
+Amherst College, I was a Decision Support Engineering Analyst in the AdWords
+division of Google Inc, a Visiting Assistant Professor of Statistics at
+[Reed College](http://www.reed.edu/), and an Assistant Professor of Statistics at [Middlebury College](http://www.middlebury.edu/).
 
 <img src="assets/images/photo.jpg" width="200">
 
@@ -36,10 +36,10 @@ division of Google Inc and a Visiting Assistant Professor of Statistics at
 <img border="0" alt="LinkedIn" src="assets/images/icons/linkedin.svg" width="50" height="50">
 </a>
 
-**Phone**: +1.802.443.5564 (no voicemails please, emails preferred)  
-**Office**: [Warner Hall 310](https://goo.gl/maps/87Y4t45Jfky)  
-Mathematics Department  
-Middlebury College  
-14 Old Chapel Road  
-Middlebury, VT  
-05753
+**Phone**: +1.413.542.5859 (no voicemails please, emails preferred)  
+**Office**: [Converse Hall 316](https://www.google.com/maps/place/Amherst+College+Converse+Hall/@42.3723643,-72.5184167,15z/data=!4m5!3m4!1s0x0:0x63162cb2397551a2!8m2!3d42.3723643!4d-72.5184167)  
+**Mailing Address**:
+202 Seeley Mudd Building
+31 Quadrangle
+Amherst, MA
+01002
