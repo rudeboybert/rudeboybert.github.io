@@ -17,7 +17,7 @@ Amherst College, I was a Decision Support Engineering Analyst in the AdWords
 division of Google Inc, a Visiting Assistant Professor of Statistics at
 [Reed College](http://www.reed.edu/), and an Assistant Professor of Statistics at [Middlebury College](http://www.middlebury.edu/).
 
-<img src="assets/images/photo.jpg" width="200">
+<img src="assets/images/photo2.jpg" width="200">
 
 
 
