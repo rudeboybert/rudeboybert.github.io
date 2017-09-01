@@ -10,3 +10,5 @@ _site
 *.out
 *.synctex.gz
 *.DS_Store
+blogdown
+public/ # if using Netlify
