@@ -5,7 +5,7 @@ tagline: Data Scientist & Statistician
 description: Albert Y. Kim's Webpage
 ---
 
-This website (previously based on Github pages) has been moved to <http://rudeboybert.netlify.com/>.
+This website (previously based on Github pages) has been moved to <http://rudeboybert.rbind.io/>.
 
 
 <!--
