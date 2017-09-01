@@ -1,0 +1,190 @@
+---
+title: "Weak Law of Large Numbers"
+author: "Albert Y. Kim"
+date: "September 20, 2016"
+output: ioslides_presentation
+---
+
+<style>
+h2 { 
+ color: #3399ff;		
+}
+h3 { 
+ color: #3399ff;		
+}
+slides > slide.backdrop {
+  background: white;
+}
+</style>
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Random Variable
+
+> * A random variable is often denoted $X$
+> * We don't know its value a priori, but we can characterize its behavior via its **distribution**
+>     + Describes relative frequency with which values occur
+>     + AUC = 1 = 100%
+
+
+
+## Distribution
+
+```{r, echo=FALSE}
+ggplot(data.frame(x = c(-4.5, 4.5)), aes(x)) + 
+  stat_function(fun = dnorm) + 
+  labs(x="x", y="density") +
+  theme_bw()
+```
+
+
+
+## Further Characterizations
+
+Its mean $\mu$ and standard deviation $\sigma$.
+
+```{r, echo=FALSE}
+domain <- seq(-4.5, 4.5, by=0.01)
+values <- data_frame(
+  x = c(domain, domain)
+) %>% 
+  mutate(
+    sigma = c(rep(1, length(domain)), rep(2, length(domain))),
+    sigma = as.factor(sigma),
+    y = c(dnorm(domain, 0, 1), dnorm(domain, 0, 1.5))
+  )
+
+ggplot(values, aes(x=x, y=y, color=sigma)) + 
+  geom_line() +
+  labs(x="x", y="density") + 
+  geom_vline(xintercept = 0, linetype="dashed") +
+  theme_bw() + 
+  scale_color_discrete(name=expression(sigma))
+```
+
+
+
+
+## Sample Mean
+
+> - We need to distinguish the true mean $\mu$ 
+> - From the **sample mean** based on a sample $X_1, \ldots, X_n$: $\overline{X}_n = \frac{1}{n}\sum_{i=1}^{n}X_i$
+> - **Moral of the Story**: $\overline{X}_n$ estimates $\mu$
+
+
+
+## Weak Law of Large Numbers
+
+
+
+
+
+
+
+## Convergence in Probability
+
+For a given $\epsilon$ and $n$
+
+> - Let $X$ have $\mu=0$
+> - Based on a sample $X_1, \ldots, X_n$ of size $n$, compute $\overline{X}_n$
+> - Do this a bunch of times to see how $\overline{X}_n$ varies from sample to sample
+
+
+
+## Convergence in Probability
+
+Recall $\mu=0$.  For $\epsilon=0.1$
+
+```{r, echo=FALSE}
+n_vector <- 10^c(1:4)
+N <- 500
+sample_means_overall <- NULL
+
+for(n in n_vector){
+  sample_means <- rep(0, N)
+  for(i in 1:N){
+    x <- rnorm(n, 0, 1)
+    sample_means[i] <- mean(x)
+  }
+  sample_means_overall <- sample_means_overall %>% 
+    bind_rows(
+      data_frame(
+        n=rep(n, N),
+        xbar=sample_means
+      )
+    )
+}
+
+eps <- 0.1
+ggplot(data=sample_means_overall, aes(x=n, y=xbar)) +
+  geom_point(alpha=0.2) +
+  scale_x_log10(breaks = 10^c(1:4)) + 
+  geom_hline(yintercept = c(0-eps, 0+eps), linetype="dashed") +
+  labs(x="n", y=expression(bar(x)[n])) 
+```
+
+
+
+## Two Results
+
+Let $X$ be a RV with mean $\mu$ and $\sigma<\infty$. Then
+
+1. The standard deviation of $\overline{X}_n = \sqrt{\frac{\sigma^2}{n}}$
+1. Chebyshev's Inequality: 
+
+  
+  
+  
+  
+
+> * Example: Let $k=2$, $\mathbb{P}\left(\left|X-\mu\right| \geq 2\sigma\right) \leq \frac{1}{4}$
+> * For **ANY** RV, the prob that it lies outside 2 standard deviations of its mean is bounded by 25%.
+
+
+
+## Chebyshev's Inequality
+
+Normal RV with $\mu=0$ and $\sigma=1$
+
+```{r, echo=FALSE}
+ggplot(data.frame(x = c(-4.5, 4.5)), aes(x)) + 
+  stat_function(fun = dnorm, args=c(0,1)) + 
+  labs(x="x", y="density") + 
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_vline(xintercept = c(-2, 2), col="red") +
+  theme_bw()
+```
+
+
+
+## Chebyshev's Inequality
+
+```{r, echo=FALSE}
+shape <- 5
+rate <- 4
+mean <- shape/rate
+sigma <- sqrt(shape/rate^2)
+```
+
+
+Gamma RV with $\mu=$ `r mean` and $\sigma=$ `r sigma %>% round(3)`
+
+```{r, echo=FALSE}
+ggplot(data.frame(x = seq(0, 4.5, by=0.01)), aes(x)) + 
+  stat_function(fun = dgamma, args=c(shape, rate)) + 
+  labs(x="x", y="density") + 
+  geom_vline(xintercept = mean, linetype="dashed") +
+  geom_vline(xintercept = c(mean-2*sigma, mean+2*sigma), col="red") +
+  theme_bw()
+```
+
+
+
+## Proof of WLLN
