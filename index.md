@@ -1,10 +1,14 @@
 ---
 layout: page
 title: Albert Y. Kim
-tagline: Lecturer in Statistics
+tagline: Data Scientist & Statistician
 description: Albert Y. Kim's Webpage
 ---
 
+This website (previously based on Github pages) has been moved to <http://rudeboybert.netlify.com/>.
+
+
+<!--
 ## Biography
 
 I am a Lecturer in Statistics in the
@@ -43,3 +47,4 @@ division of Google Inc, a Visiting Assistant Professor of Statistics at
 31 Quadrangle  
 Amherst, MA  
 01002
+-->
