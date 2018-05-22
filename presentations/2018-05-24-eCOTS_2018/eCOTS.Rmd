@@ -1,0 +1,217 @@
+---
+title: "Smaller investments and bigger <br>payoffs of using R in intro courses <br>via 'tame data'"
+author: "Albert Y. Kim - Amherst College"
+date: "Thursday May 24th, 2018"
+output:
+#  ioslides_presentation:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: kable
+    theme: cosmo
+    highlight: tango  
+---
+
+
+<style>
+h1 { 
+ color: #451675;		
+}
+h2 { 
+ color: #451675;		
+}
+a:link {
+  color: #451675;	
+}
+slides > slide.title-slide hgroup h1 {
+  font-weight: bold;
+  font-size: 35pt;
+  color: #451675;
+}
+slides > slide.backdrop {
+  background: white;
+}
+
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+if(TRUE){
+  knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+} else {
+  knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+  knitr::purl("eCOTS.Rmd", documentation = 0)
+}
+```
+
+
+
+
+## Background
+
+This eCOTS 2018 virtual poster (<a target="_blank" class="page-link" href="https://www.causeweb.org/cause/ecots/ecots18/posters/4-01">video</a>) assumes you know
+
+1. The difference between R and RStudio
+1. How R packages work, are installed, and are loaded
+
+If you're new to R: ModernDive Chapter 2 <a target="_blank" class="page-link" href="http://moderndive.com/2-getting-started.html">Getting Started with Data</a>
+
+
+
+
+## Payoffs vs costs ratio
+
+Decision of whether to use R can be viewed in terms of ratio:
+
+$$
+\frac{\mbox{Payoffs of using R}}{\mbox{Costs of learning R}}
+$$
+
+Ratio has increased of late due to many reasons, in particular DataCamp (free <a target="_blank" class="page-link" href="https://www.datacamp.com/groups/education">academic licence</a>)
+
+<!--
+<center>
+<a href="https://www.datacamp.com/groups/education">
+<img src="https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_RGB-d196011f63ebda76dc5c9772425cf9541b8639af842d5e5476ef10f2460ed1e4.png" alt="Drawing" style="height: 75px;"/>
+</a>
+</center>
+-->
+
+
+
+## Increasing ratio with data
+
+Our proposal to increase ratio: provide data that is
+
+<!--
+1. Rich enough to answer meaningful questions with
+1. Real enough to have context
+1. Realistic enough to convey the nature of data "in the wild"
+-->
+
+* Rich, real, and realistic
+* Easily accessible and "tamed" for novices.
+
+
+
+## A balancing act
+
+In other words, "taming" sets a balance between data
+
+As it exists "in the wild"          |  Completely safe
+:-------------------------:|:-------------------------:
+<img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/grizzly.gif?raw=true" alt="Drawing" style="height: 200px;"/> | <img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/teddy.jpg?raw=true" alt="Drawing" style="height: 200px;"/> 
+
+
+
+
+
+
+
+## "Tame" data principles
+
+We propose the following <a target="_blank" class="page-link" href="http://rpubs.com/rudeboybert/fivethirtyeight_tamedata">"tame" data principles</a> with novices in mind. All data should have
+
+1. Clean variable names
+1. ID variables marked
+1. Clean dates
+1. Clean categorical variables 
+1. Consistent <a target="_blank" class="page-link" href="http://r4ds.had.co.nz/tidy-data.html">"tidy"</a> format
+
+
+
+
+
+## fivethirtyeight package
+
+<!--
+<center>
+<img src="https://projects.fivethirtyeight.com/2016-election-forecast/images/logotype.svg?v=83ae77427097e81d0f2d817d8dee75d9" alt="Drawing" vspace="20" style="height: 75px;"/>
+</center>
+-->
+
+The `fivethirtyeight` R package:
+
+* Takes FiveThirtyEight's raw article data from <a target="_blank" class="page-link" href="https://github.com/fivethirtyeight/data">GitHub</a>
+* "Tames" the raw data
+* Makes data, documentation, and original article easily accessible via an R package
+
+
+
+
+## Example usage
+
+Two data visualizations via:
+
+1. Base R
+1. `ggformula` package 
+
+<!--
+[Wednedsay eCOTS Tech Talk](https://www.causeweb.org/cause/ecots/ecots18/tech-talk/3)
+-->
+
+<!---
+1. `ggplot2` package  `tidyverse` package for declaratively creating graphics based on [The Grammar of Graphics](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl?ie=UTF8&qid=1477928463&sr=8-1&keywords=the+grammar+of+graphics&linkCode=sl1&tag=ggplot2-20&linkId=f0130e557161b83fbe97ba0e9175c431)
+-->
+
+Code below available at <a target="_blank" class="page-link" href="http://bit.ly/ecots_2018">bit.ly/ecots_2018</a>
+
+```{r}
+# Load fivethirtyeight and other needed packages
+library(fivethirtyeight)
+library(dplyr)
+library(ggformula)
+
+
+# Ex 1: US Births ---------------------------------------------------
+View(US_births_1994_2003)
+?US_births_1994_2003
+
+# Use filter command from dplyr package for data wrangling
+US_births_1999 <- US_births_1994_2003 %>%
+  filter(year == 1999)
+View(US_births_1999)
+
+# Plot time series via base R:
+plot(x = US_births_1999$date, y = US_births_1999$births, type = "l")
+
+
+# Ex 2: Hate crimes -------------------------------------------------
+View(hate_crimes)
+?hate_crimes
+
+# Create scatterplot & regression line via ggformula package
+gf_point(hate_crimes_per_100k_splc ~ share_vote_trump, data = hate_crimes) %>%
+  gf_lm()
+
+
+# Ex 3: Campaign stops of last 10 weeks of 2016 US election ---------
+View(pres_2016_trail)
+?pres_2016_trail
+
+# Create map of Clinton vs Trump campaing stops via ggplot2 package and using
+# preloaded map_data of US states in maps package
+library(ggplot2)
+library(maps)
+ggplot(data = pres_2016_trail, aes(x = lng, y = lat)) +
+  facet_wrap(~candidate) +
+  geom_point(col = "black", size = 3) + 
+  coord_map() + 
+  geom_path(data = map_data("state"), aes(x = long, y = lat, group = group), size = 0.1)
+```
+
+
+
+## Tips and resources
+
+* Follow-up <a target="_blank" class="page-link" href="https://www.causeweb.org/cause/webinars">CAUSEweb webinar</a> Tue June 12 2pm EDT
+* More on "tame" data and `fivethirtyeight` in TISE article (<a target="_blank" class="page-link" href="http://rpubs.com/rudeboybert/fivethirtyeight_tamedata">HTML</a>,
+<a target="_blank" class="page-link" href="https://escholarship.org/uc/item/0rx1231m#main">PDF</a>)
+* Package <a target="_blank" class="page-link" href="https://fivethirtyeight-r.netlify.com/articles/fivethirtyeight.html">homepage</a> including list of all datasets
+* Link to this presentation <a target="_blank" class="page-link" href="http://bit.ly/ecots_2018">bit.ly/ecots_2018</a>
+
+<!--
+* Examples of undergraduate student source code used to "tame" original 538 data for package 
+    1. [`process_data_sets_maggie.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_maggie.R)
+    1. [`process_data_sets_meredith.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_meredith.R)
+-->
