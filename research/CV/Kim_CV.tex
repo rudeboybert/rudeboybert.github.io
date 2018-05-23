@@ -1,7 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Don't like 10pt? Try 11pt or 12pt
@@ -114,6 +110,9 @@
 
 
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% HEADING AT TOP OF CURRICULUM VITAE
@@ -186,7 +185,7 @@
 %
 % Usage:
 %   \begin{outerlist}
-%       \item ...    % (or \item[] for no bullet)
+%    	\item ...    % (or \item[] for no bullet)
 %   \end{outerlist}
 \newlist{outerlist}{itemize}{3}
     \setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
@@ -198,7 +197,7 @@
 %
 % Usage:
 %   \begin{lonelist}
-%       \item ...    % (or \item[] for no bullet)
+%    	\item ...    % (or \item[] for no bullet)
 %   \end{lonelist}
 \newlist{lonelist}{itemize}{3}
     \setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
@@ -209,7 +208,7 @@
 %
 % Usage:
 %   \begin{innerlist}
-%       \item ...    % (or \item[] for no bullet)
+%    	\item ...    % (or \item[] for no bullet)
 %   \end{innerlist}
 \newlist{innerlist}{itemize}{3}
     \setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
@@ -220,7 +219,7 @@
 %
 % Usage:
 %   \begin{loneinnerlist}
-%       \item ...    % (or \item[] for no bullet)
+%    	\item ...    % (or \item[] for no bullet)
 %   \end{loneinnerlist}
 \newlist{loneinnerlist}{itemize}{3}
     \setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
@@ -311,10 +310,12 @@ Amherst College\\
 202 Seeley Mudd Building\\
 31 Quadrangle\\
 Amherst MA, 01002\\
-Webpage: \href{http://rudeboybert.github.io/}{\nolinkurl{http://rudeboybert.github.io/}}\\
+\\
+Webpage: \href{http://rudeboybert.rbind.io/}{\nolinkurl{http://rudeboybert.rbind.io/}}\\
 Work E-mail: \href{mailto:aykim@amherst.edu}{\nolinkurl{aykim@amherst.edu}}\\
-GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rudeboybert}}
-
+Personal E-mail: \href{mailto:albert.ys.kim@gmail.com}{\nolinkurl{albert.ys.kim@gmail.com}}\\
+GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rudeboybert}}\\
+Twitter: \href{https://twitter.com/rudeboybert}{\nolinkurl{https://twitter.com/rudeboybert}}
 
 
 
@@ -331,7 +332,6 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 
 
-
 %----------------------------------------------------------------------%
 \vspace{0.1in}
 \section{Education}
@@ -340,10 +340,10 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \begin{outerlist}
 \item[] Ph.D., Statistics
         \begin{innerlist}
-        \item Thesis Topic: \emph{A Bayesian Surveillance System for
+     	\item Thesis Topic: \emph{A Bayesian Surveillance System for
         Detecting Clusters of Non-Infectious Diseases}.
-        \item Advisor: Professor Jon C.~Wakefield.
-        \item Area of Study: Spatial Epidemiology, Biostatistics,
+     	\item Advisor: Professor Jon C.~Wakefield.
+     	\item Area of Study: Spatial Epidemiology, Biostatistics,
         Markov Chain Monte Carlo Methods.
         \end{innerlist}
 \end{outerlist}
@@ -354,11 +354,10 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \begin{outerlist}
 \item[] B.Sc., Joint Honours in Mathematics and Computer Science
         \begin{innerlist}
-        \item \emph{First Class Honours}.
-        \item Minor in Management.
+     	\item \emph{First Class Honours}.
+     	\item Minor in Management.
         \end{innerlist}
 \end{outerlist}
-
 
 
 
@@ -371,12 +370,14 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{Amherst College, Amherst MA} \hfill {August 2017 to Present}
 \begin{outerlist}
-    \item[] Lecturer in Statistics, Mathematics and Statistics Department
+ 	\item[] Lecturer in Statistics, Mathematics and Statistics Department
     	\begin{innerlist}
 		\item Courses taught:
 		\begin{innerlist}
-		\item[$\circ$] Introduction to Statistical Science (STAT 135)
-		\item[$\circ$] Advanced Data Analysis (STAT 495)
+		\item[$\circ$] Introduction to Statistics via Modeling (STAT 135): Introductory statistics and 
+		data science course.
+		\item[$\circ$] Advanced Data Analysis (STAT 495): Senior capstone course on machine 
+		learning in preparation for senior theses
 		\end{innerlist}
 	\end{innerlist}
 \end{outerlist}
@@ -385,7 +386,7 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{Middlebury College, Middlebury VT} \hfill {August 2015 to July 2017}
 \begin{outerlist}
-    \item[] Assistant Professor of Statistics, Mathematics Department
+ 	\item[] Assistant Professor of Statistics, Mathematics Department
     	\begin{innerlist}
 		\item Courses taught:
 		\begin{innerlist}
@@ -404,9 +405,9 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{Reed College, Portland OR} \hfill {August 2013 to July 2015}
 \begin{outerlist}
-    \item[] Visiting Assistant Professor of Statistics, Mathematics Department
+ 	\item[] Visiting Assistant Professor of Statistics, Mathematics Department
     \begin{innerlist}
-        \item Responsibilities:
+     	\item Responsibilities:
 		\begin{innerlist}
 		\item[$\circ$] Teaching undergraduate probability and statistics courses.
 		\item[$\circ$] Supervising senior theses.
@@ -427,7 +428,7 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{University of Washington Seattle, WA} \hfill {June 2010 to August 2010}
 \begin{outerlist}
-    \item[] Pre-Doctoral Instructor, Statistics Department
+ 	\item[] Pre-Doctoral Instructor, Statistics Department
     \begin{innerlist}
 		\item Courses taught:
 		\begin{innerlist}
@@ -441,7 +442,7 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{University of Washington Seattle, WA} \hfill {September 2004 to June 2005}
 \begin{outerlist}
-    \item[] Teaching Assistant, Statistics Department
+ 	\item[] Teaching Assistant, Statistics Department
     \begin{innerlist}
 		\item Courses taught:
 		\begin{innerlist}
@@ -456,17 +457,16 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 
 
-
 %----------------------------------------------------------------------%
 \vspace{0.1in}
 \section{Professional Experience}
 
 \textbf{Decision Support Engineering Analyst} \hfill {June 2011 to March 2013}
 \begin{outerlist}
-    \item[] Ads Metrics, Google Inc., Mountain View, CA
+ 	\item[] Ads Metrics, Google Inc., Mountain View, CA
     \begin{innerlist}
-        \item Manager: Nicholas Chamandy
-        \item Responsibilities:
+     	\item Manager: Nicholas Chamandy
+     	\item Responsibilities:
             \begin{innerlist}
 			\item[$\circ$] Quantitative analyst in Ads Metrics (analyst sub-team
 			of Google AdWords), tasked with ensuring the quality of search
@@ -490,10 +490,10 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 \textbf{Decision Support Engineering Analyst Intern} \hfill {January 2010 to March 2010}
 \begin{outerlist}
-    \item[] Ads Metrics, Google Inc., Mountain View, CA
+ 	\item[] Ads Metrics, Google Inc., Mountain View, CA
     \begin{innerlist}
-        \item Manager: Nicholas Chamandy
-        \item Responsibilities:
+     	\item Manager: Nicholas Chamandy
+     	\item Responsibilities:
             \begin{innerlist}
 			\item[$\circ$] Same as full time position described above.
 			\item[$\circ$] Specific projects contributed to as an analyst: Task
@@ -508,18 +508,18 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 
 
-
 %----------------------------------------------------------------------%
 \vspace{0.1in}
 \section{Peer-Reviewed Publications}
 
 \begin{bibenum}
-    \item A.Y.~Kim, and J.~Wakefield. (2016) A Bayesian Method for Cluster Detection with Application to Brain and Breast Cancer in Puget Sound. \emph{Epidemiology}, 27(3), 347-55.
-    \item A.Y.~Kim, and A.~Escobedo-Land. (2015) OkCupid Profile Data for Introductory Statistics and Data Science Courses.  \emph{Journal of Statistical Education}, 23(2).
-    \item J.~Wakefield, and A.Y.~Kim. (2013) A Bayesian Model for Cluster Detection. \emph{Biostatistics}, 14(4), 752-765.
-    \item A.Y.~Kim, C.~Marzban, D.B.~Percival, and W.~Stuetzle (2009) Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. \emph{Signal Processing}, 89(12), 2529-2536.
+	\item A.Y.~Kim, C.~Ismay, J.~Chunn. (2018) The fivethirtyeight R Package: "Tame Data" Principles for Introductory Statistics and Data Science Courses. \emph{Technological Innovations in Statistics Education} (Accepted)
+	\item R.D.~De Veaux, M.~Agarwal, M.~Averett, B.S.~Baumer, A.~Bray, T.C.~Bressoud,L.~Bryant, L.Z.~Cheng, A.~Francis, R.~Gould, A.Y.~Kim, M.~Kretchmar, Q.~Lu, A.~Moskol, D.~Nolan, R.~Pelayo, S.~Raleigh, R.J.~Sethi, M.~Sondjaja, N.~Tiruviluamala, P.X.~Uhlig, T.M.~Washington, C.L.~Wesley, D.~White, and P.~Ye. (2017) Curriculum Guidelines for Undergraduate Programs in Data Science. \emph{Annual Review of Statistics and Its Application}, 4(2), 1-16.
+	\item A.Y.~Kim, and J.~Wakefield. (2016) A Bayesian Method for Cluster Detection with Application to Brain and Breast Cancer in Puget Sound. \emph{Epidemiology}, 27(3), 347-55.
+ 	\item A.Y.~Kim, and A.~Escobedo-Land. (2015) OkCupid Profile Data for Introductory Statistics and Data Science Courses.  \emph{Journal of Statistical Education}, 23(2).
+ 	\item J.~Wakefield, and A.Y.~Kim. (2013) A Bayesian Model for Cluster Detection. \emph{Biostatistics}, 14(4), 752-765.
+ 	\item A.Y.~Kim, C.~Marzban, D.B.~Percival, and W.~Stuetzle (2009) Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. \emph{Signal Processing}, 89(12), 2529-2536.
 \end{bibenum}
-
 
 
 
@@ -529,13 +529,11 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 %----------------------------------------------------------------------%
 \vspace{0.1in}
 \section{Preprints or In Preparation}
-
 \begin{bibenum}
-   \item A.Y.~Kim, C.~Ismay, J.~Chunn. (2017) The fivethirtyeight R Package: "Tame Data" Principles for Introductory Statistics and Data Science Courses.
-   \item T.~Singh, A.Y.~Kim. (2017) Regression and Matching for Causal Inference.
-   \item D.~Allen, A.Y.~Kim. (2018) Estimating Species-Specific Competition Coefficients with a Bayesian Hierarchical Model of the Neighborhood Effect of Competition on Tree Growth.
+	\item C.~Ismay, A.Y.~Kim. (2018) ModernDive: An Introduction to Statistical and Data Sciences via R
+	\item T.~Singh, A.Y.~Kim. (2018) Regression and Matching for Causal Inference.
+	\item D.~Allen, A.Y.~Kim. (2018) Estimating Species-Specific Competition Coefficients with a Bayesian Hierarchical Model of the Neighborhood Effect of Competition on Tree Growth.
 \end{bibenum}
-
 
 
 
@@ -546,10 +544,9 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \vspace{0.1in}
 \section{Awards}
 \begin{innerlist}
-    \item Dorothy M. Gilford Teaching Award: University of Washington Department of Statistics, 2005. Awarded annually to recognize the best teaching assistant.
-    \item Bill and Hilde Birnbaum Fellowship: University of Washington Department of Statistics, 2004.  Scholarship awarded annually to one incoming student.
+ 	\item Dorothy M. Gilford Teaching Award: University of Washington Department of Statistics, 2005. Awarded annually to recognize the best teaching assistant.
+ 	\item Bill and Hilde Birnbaum Fellowship: University of Washington Department of Statistics, 2004.  Scholarship awarded annually to one incoming student.
 \end{innerlist}
-
 
 
 
@@ -567,7 +564,9 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 % Enrique Dupleich Rozo, Aviva Shwayder,
 % Carter Pribis
 % Brenda Li, Jed Grabman, Miguel Conner
+% Jenn Halbleib, Jacob Menick, Jonathan Che, Katherine Hobbs, Alex Pastora
 \begin{innerlist}
+	% \itme Senior Thesis: Jonathan Che
 	\item Senior Thesis: James Burke, ``Baseball as a Markov Chain: A Bayesian Approach'' Spring 2017.
 	\item Independent Study (MATH 500): Trisha Singh, reading course on
 	causal inference, Spring 2017.
@@ -599,33 +598,24 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 %----------------------------------------------------------------------%
 \vspace{0.1in}
-\section{Presentations}
+\section{Presentations and Workshops}
 
 \begin{innerlist}
+	\item Meetup, December 2017: Modeling the effects of interspecies competition on the growth of trees. 5College Stats and Data Science Research Bytes, Western Mass Statistics and Data Science Meetup, Amherst MA.
+	\item Tech Talk, May 2016: Using GitHub for Education to Encourage Open Learning and Facilitate Feedback. Middlebury College ``Digital Liberal Arts Behind the Scenes series'', Middlebury VT.
 	\item Tech Talk, May 2016: Using GitHub for Education to Encourage Open Learning and Facilitate Feedback. Middlebury College ``Digital Liberal Arts Behind the Scenes series'', Middlebury VT.
 	\item Meetup, April 2016: How to Teach Data Science. Burlington Data Scientists Meetup, Burlington VT.
-    \item Paper, August 2015: A Bayesian Model for Detecting Cluster Detection. New Researchers Conference, Joint Statistical Meetings, Seattle WA.
-    \item Tech Talk, June 2015: Teaching Data Science to Undergrads. 729 Miles of Technology Conference, Reed College, Portland OR.
-    \item Tech Talk, June 2015: Teaching data science to undergrads: an ex-Googler's tales from the trenches. Google Inc, Mountain View, CA.
+	\item Paper, August 2015: A Bayesian Model for Detecting Cluster Detection. New Researchers Conference, Joint Statistical Meetings, Seattle WA.
+	\item Tech Talk, June 2015: Teaching Data Science to Undergrads. 729 Miles of Technology Conference, Reed College, Portland OR.
+	\item Tech Talk, June 2015: Teaching data science to undergrads: an ex-Googler's tales from the trenches. Google Inc, Mountain View, CA.
     % \item Univeristy of Portland
-    \item Paper, February 2014: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Oregon Chapter of the American Statistical Association, Portland OR.
-    \item Paper, August 2010: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Joint Statistical Meetings, Vancouver BC Canada.
-    \item Paper, August 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Joint Statistical Meetings, Denver CO.
-    \item Paper, May 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Interface Conference, Durham NC.
-    \item Report, February 2006: Changepoint Detection in Multivariate Data Streams. Counter Improvised Explosive Device Meeting, Naval Research Laboratory, Washington DC.
+	\item Paper, February 2014: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Oregon Chapter of the American Statistical Association, Portland OR.
+	\item Paper, August 2010: A Bayesian Model for Detecting Clusters of Non-Infectious Diseases. Joint Statistical Meetings, Vancouver BC Canada.
+	\item Paper, August 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Joint Statistical Meetings, Denver CO.
+	\item Paper, May 2008: Using Labeled Data to Evaluate Change Detectors in a Multivariate Streaming Environment. Interface Conference, Durham NC.
+	\item Report, February 2006: Changepoint Detection in Multivariate Data Streams. Counter Improvised Explosive Device Meeting, Naval Research Laboratory, Washington DC.
 \end{innerlist}
 
 
@@ -633,17 +623,16 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 
 
-
 %----------------------------------------------------------------------%
 \vspace{0.1in}
-\section{Panels and Workshops Led}
+\section{Panels and Workshops}
 
 \begin{innerlist}
-  \item ``A Fully Customizable Textbook for Introductory Statistics/Data Science Courses,'' USCOTS, June 2017, State College PA
+	\item Career speakers panel, September 2017. StatFest, Emory University, Atlanta GA.
+	\item ``A Fully Customizable Textbook for Introductory Statistics/Data Science Courses,'' USCOTS, June 2017, State College PA
 	\item ``Open Source Resources for Mathematics: Benefits and Costs,'' Mathematical Association of America Mathfest conference, August 2014, Portland OR.
 	\item Career speakers panel, May 2014. Statistical Society of Canada Annual Meeting Student Conference, Toronto ON.
 \end{innerlist}
-
 
 
 
@@ -655,19 +644,20 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \section{Computing Skills}
 
 \begin{innerlist}
-	\item Programming languages: C, C++, Python, MySQL, Java, Julia.
-  \item Applications: R, Git, MapReduce, MATLAB.
-  \item Maintainer of the following \verb#R# open-source software packages:
+	\item Programming languages: C, C++, Python, MySQL, Java.
+	\item Applications: R, Git, MapReduce, MATLAB.
+	\item Maintainer of the following \verb#R# open-source software packages:
   \begin{innerlist}
-    \item[$\circ$] \verb#SpatialEpi#: Data and methods for spatial epidemiology.
-		\item[$\circ$] \verb#resampledata#: Package of data sets from ``Mathematical
-		Statistics with Resampling in R'' by Chihara and Hesterberg.
-		\item[$\circ$] \verb#fivethirtyeight#: Data and Code Behind the Stories and Interactives at FiveThirtyEight.
-	\end{innerlist}
-	\item Contributor to \verb#oilabs# \verb#R# package of data and code
-	necessary for R labs accompanying OpenIntro textbook.
+ 	\item[$\circ$] \verb#SpatialEpi#: Data and methods for spatial epidemiology.
+ 	\item[$\circ$] \verb#resampledata#: Package of data sets from ``Mathematical Statistics with Resampling in R'' by Chihara and Hesterberg.
+ 	\item[$\circ$] \verb#fivethirtyeight#: Data and Code Behind the Stories and Interactives at FiveThirtyEight.
+    \end{innerlist}
+ 	\item Contributor to the following \verb#R# open-source software packages:
+    \begin{innerlist}
+ 	\item[$\circ$] \verb#oilabs#: Data and code necessary for R labs accompanying OpenIntro textbook.
+ 	\item[$\circ$] \verb#infer#: Package for tidy statistical inference
+    \end{innerlist}
 \end{innerlist}
-
 
 
 
@@ -679,12 +669,11 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \section{Journal Review Service}
 
 \begin{innerlist}
-    \item The American Statistician
-    \item Journal for Quantitative Analysis in Sports
-    \item Technology Innovations in Statistics Education
-    \item Journal of Statistics Education
+ 	\item The American Statistician
+ 	\item Journal for Quantitative Analysis in Sports
+ 	\item Technology Innovations in Statistics Education
+ 	\item Journal of Statistics Education
 \end{innerlist}
-
 
 
 
@@ -695,9 +684,33 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \vspace{0.1in}
 \section{External Service}
 \begin{innerlist}
-    \item Organizing committee, 2017 ASA DataFest.
-    \item Volunteer for OpenIntro open-source introductory statistics textbook.
+	\item Organizing committee, 2018 StatFest: a one-day event aimed at encouraging undergraduate students from under-represented groups to consider graduate studies and careers in the statistical sciences.
+ 	\item Organizing committee, 2017 ASA DataFest.
+ 	\item Volunteer for OpenIntro open-source introductory statistics textbook.
 \end{innerlist}
+
+
+
+
+
+
+%----------------------------------------------------------------------%
+\vspace{0.1in}
+\section{College Service}
+
+\begin{innerlist}
+	\item Amherst College StatFellows coordinator: StatFellows are undergraduate statistics ambassadors for Amherst College performing tutoring and statistical consulting across campus, 2017-2018
+	\item Faculty lead for Green Chicken student math competition between Williams and Middlebury Colleges (co-lead with Prof. E. Proctor), 2016.
+	\item Faculty lead for R Community of Practice for Middlebury Faculty, 2016-present.
+	\item Co-organizer of inaugural ASA DataFest Vermont (with Prof. P. Yates, Saint Michael's College), 2016.
+	\item Chief organizer of ASA DataFest Vermont (Middlebury College), 2017.
+	\item Volunteer judge for ASA DataFest Five Colleges (UMass Amherst) 2016 and 2017.
+	\item Co-creator of Reed College statistics concentration within mathematics
+	major (with Prof. A. Jones), 2015.
+\end{innerlist}
+
+
+
 
 
 
@@ -721,37 +734,13 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 
 %----------------------------------------------------------------------%
 \vspace{0.1in}
-\section{College Service}
-
-\begin{innerlist}
-	\item Faculty lead for Green Chicken student math competition between
-	Williams and Middlebury Colleges (co-lead with Prof. E. Proctor), 2016.
-	\item Faculty lead for R Community of Practice for Middlebury Faculty, 2016-present.
-	\item Co-organizer of inaugural ASA DataFest Vermont (with Prof. P. Yates, Saint Michael's College), 2016.
-	\item Chief organizer of ASA DataFest Vermont (Middlebury College), 2017.
-	\item Volunteer judge for ASA DataFest Five Colleges (UMass Amherst) 2016 and 2017.
-	\item Co-creator of Reed College statistics concentration within mathematics
-	major (with Prof. A. Jones), 2015.
-\end{innerlist}
-
-
-
-
-
-
-
-
-%----------------------------------------------------------------------%
-\vspace{0.1in}
 \section{Personal}
 
 \begin{innerlist}
 	\item Languages: English, French (fluent), Korean (conversational).
-	\item Interests: American history, hiking, standup paddleboarding,
+	\item Interests: History, hiking, standup paddleboarding,
 	hockey, skiing, bicycling, and backcountry camping.
 \end{innerlist}
-
-
 
 
 
@@ -762,6 +751,7 @@ GitHub: \href{https://github.com/rudeboybert}{\nolinkurl{https://github.com/rude
 \vspace{0.1in}
 \section{Last Updated}
 \filemodprintdate{\jobname}
+
 
 
 
