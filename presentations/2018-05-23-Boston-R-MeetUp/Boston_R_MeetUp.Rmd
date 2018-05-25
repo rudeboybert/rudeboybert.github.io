@@ -1,0 +1,382 @@
+---
+title: "ModernDive: Statistical Inference via Data Science"
+author: "Albert Y. Kim - Amherst College -> Smith College (July 2018)"
+date: "Wed May 23rd, 2018"
+output:
+  ioslides_presentation:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    df_print: kable
+    theme: cosmo
+    highlight: tango  
+    code_download: true
+    code_folding: hide
+---
+
+
+<style>
+h1 { 
+ color: #451675;		
+}
+h2 { 
+ color: #451675;		
+}
+a:link {
+  color: #451675;	
+}
+slides > slide.title-slide hgroup h1 {
+  font-weight: bold;
+  font-size: 35pt;
+  color: #451675;
+}
+slides > slide.backdrop {
+  background: white;
+}
+
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+if(TRUE){
+  knitr::opts_chunk$set(
+    echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE,
+    fig.width = 16/2, fig.height = 9/2
+    )
+} else {
+  knitr::opts_chunk$set(
+    echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE,
+    fig.width = 16/2, fig.height = 9/2)
+  knitr::purl("eCOTS.Rmd", documentation = 0)
+}
+```
+
+
+
+
+## Pop quiz!
+
+Sampling from a bowl of red and white balls!
+
+
+## About me
+
+* PhD trained statistician 
+* Worked at Google in AdWords Division
+* Small colleges: Reed, Middlebury, Amherst, and now Smith Colleges
+* Awash in "statistics vs data science" debates
+
+
+## Awash in Venn Diagrams...
+
+Drew Conway          |  Drew Conway 2.0
+:-------------------------:|:-------------------------:
+<img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/data_science_1.png?raw=true" alt="Drawing" style="height: 200px;"/> | <img src="http://i2.wp.com/www.jose-gonzalez.org/wp-content/uploads/2013/08/datasciencevendiagram.png" alt="Drawing" style="height: 200px;"/> 
+
+
+## Awash in quotes...
+
+Some more problematic than others:
+
+* A data scientist is someone who is better at statistics than any software engineer and better at software engineering than any statistician.
+* A data scientist is a statistician who lives in San Francisco
+* [A data scientist is a statistician who is wearing a bow tie.](https://twitter.com/francescadomin8/status/906608168733511680)
+* From my time at Google: An engineer knows what an average is, but an analyst knows what a standard deviation is
+
+
+## rudeboybert says
+
+What can statistics bring to the data science table? Among other things, how about?
+
+> **A statistician is a data scientist who understands what a standard error is.**
+
+
+
+## ModernDive
+
+<center>
+<img src="https://github.com/moderndive/moderndive_book/blob/master/images/logos/wide_format.png?raw=true" alt="Drawing" style="height: 100px;"/> 
+</center>
+
+<br>
+
+* Open source electronic textbook available at [moderndive.com](http://moderndive.com/)
+* Development version at [moderndive.netlify.com](http://moderndive.netlify.com/) (source of today's examples)
+* RStudio [`bookdown`](https://bookdown.org/yihui/bookdown/) package source code on GitHub at [github.com/moderndive/](https://github.com/moderndive/)
+* No programming background assumed
+
+
+
+## A few pedagogical principles
+
+1. Have intro students ["play the whole game"]( http://a.co/50CpHGX)
+1. Use data science, not probability/mathematical formulas, to motivate statistical inference
+1. Coding as a basic skill
+
+
+
+## Principle 1: "Play the whole game"
+
+In the context of statistics/data analysis, by "play the whole game" we mean Wickham's data/science pipeline:
+
+<center>
+<img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/pipeline.png?raw=true" alt="Drawing" style="height: 200px;"/> 
+</center>
+
+
+
+## Tee-ball
+
+Think how children learn "tee-ball" and play a simplified version of the "whole game" first...
+
+<img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/teeball.JPG?raw=true" alt="Drawing" style="height: 300px;"/>
+
+
+## Softball & baseball
+
+... and then eventually graduate to softball/baseball.
+
+<img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/softball.jpg?raw=true" alt="Drawing" style="height: 250px;"/> <img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/baseball.jpg?raw=true" alt="Drawing" style="height: 250px;"/>
+
+
+
+## Example "whole game"
+
+* Load the [Seattle house prices dataset](https://www.kaggle.com/harlfoxem/housesalesprediction) from Kaggle saved in `moderndive::house_prices`
+* Model $y$ the sale `price` of house as a function of two explanatory/predictor variables:
+    1. $x_1$: size (`sqft_living` square feet)
+    1. $x_2$: `condition` (catgorical w/ 1 = lowest, 5 = best)
+* Communicate the results to a realtor
+
+
+### 1. Load packages and data
+
+Load subset of variables:
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(moderndive)
+library(patchwork)
+house_prices %>% 
+  select(id, date, price, sqft_living, condition) %>% 
+  head()
+```
+
+### 2. Exploratory data analysis
+
+Variables `price` and `sqft_living` are right-skewed:
+
+```{r}
+p1 <- ggplot(house_prices, aes(x = price)) +
+  geom_histogram() +
+  labs(x = "price", title = "House prices in Seattle")
+p2 <- ggplot(house_prices, aes(x = sqft_living)) +
+  geom_histogram() +
+  labs(x = "square feet", title = "Size of houses in Seattle")
+p1 + p2
+```
+
+Apply a log base 10 tranformation: 
+
+```{r}
+house_prices <- house_prices %>%
+  mutate(
+    log10_price = log10(price),
+    log10_sqft_living = log10(sqft_living)
+    )
+
+p1 <- ggplot(house_prices, aes(x = log10_price)) +
+  geom_histogram() +
+  labs(x = "log10 price", title = "House prices in Seattle")
+p2 <- ggplot(house_prices, aes(x = log10_sqft_living)) +
+  geom_histogram() +
+  labs(x = "log10 square feet", title = "Size of houses in Seattle")
+p1 + p2
+```
+
+### 3. Eyeball the relationship
+
+Visualize the relationship between the variables using facets...
+
+```{r, cache = TRUE}
+ggplot(house_prices, aes(x = log10_sqft_living, y = log10_price)) +
+  geom_point(alpha = 0.5) +
+  labs(y = "log10 price", x = "log10 square footage", title = "House prices in Seattle") +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~condition)
+```
+
+... or colors
+
+```{r, cache = TRUE}
+ggplot(house_prices, aes(x = log10_sqft_living, y = log10_price, col = condition)) +
+  geom_point(alpha = 0.1) +
+  labs(y = "log10 price", x = "log10 square footage", title = "House prices in Seattle") +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+
+### 4. Quantify the relationship
+
+* Fit an interaction model which allows for a unique regression line for each `condition` value
+* Output the regression table **along with confidence intervals, not just the p-values**.
+
+```{r}
+model_price <- lm(log10_price ~ log10_sqft_living * condition, data = house_prices)
+get_regression_table(model_price)
+```
+
+
+
+## Objective
+
+**End goal**: understand and interpret the inference for regression, which requires lot of skills/knowledge. For example:
+
+> 1. What's the difference between R & RStudio? What's an R package?
+> 1. How do effectively visualize data?
+> 1. How can I clean data as it "exists in the wild"?
+> 1. How do I model the relationship between variables?
+> 1. What is the error/uncertainty of our results?
+
+
+
+## Means to the end
+
+> 1. Analogies: [R vs RStudio](http://moderndive.netlify.com/2-getting-started.html#what-are-r-and-rstudio) and [R packages](http://moderndive.netlify.com/2-getting-started.html#packages)
+> 1. Visualization via `ggplot2`: [Grammar of Graphics](http://moderndive.netlify.com/3-viz.html#components-of-the-grammar) and limit scope to ["Five Named Graphs"](http://moderndive.netlify.com/3-viz.html#FiveNG)
+> 1. `dplyr` ["Five Main Verbs"](http://moderndive.netlify.com/5-wrangling.html#five-main-verbs---the-5mv) for data wrangling/transformation
+> 1. Descriptive regression modeling with emphasis on exploratory data analysis (See [Figure 7.4](http://moderndive.netlify.com/7-multiple-regression.html#model4EDA))
+> 1. How do we teach ideas of representative sampling, sampling distributions, and standard errors? A work in progress...
+
+
+## Principle 2: Inference via data science
+
+<center>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/minebocek?ref_src=twsrc%5Etfw">@minebocek</a> emphasizing that most students won&#39;t get excited about stats/data science via urn models/probability <a href="https://twitter.com/hashtag/USCOTS2017?src=hash&amp;ref_src=twsrc%5Etfw">#USCOTS2017</a> <a href="https://t.co/ume0kuvFYT">pic.twitter.com/ume0kuvFYT</a></p>&mdash; Albert Y. Kim (@rudeboybert) <a href="https://twitter.com/rudeboybert/status/865912673489346561?ref_src=twsrc%5Etfw">May 20, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+
+
+
+## Simulations not probability/formulas
+
+More of this          |  Less of this
+:-------------------------:|:-------------------------:
+<img src="https://heavyeditorial.files.wordpress.com/2017/12/screen-shot-2017-12-30-at-5-29-13-am.jpg?quality=65&strip=all&w=1024" alt="Drawing" style="height: 200px;"/> | <img src="https://github.com/rudeboybert/STAT135/blob/master/static/images/formulas.png?raw=true" alt="Drawing" style="height: 200px;"/> 
+
+
+## First: Tactile simulations
+
+<center>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Semi-annual tactile simulation of sampling to estimate proportion of balls in a bowl that are red (then construct sampling distribution). Went much cleaner this time with Red Solo Cups! <a href="https://twitter.com/tobykeith?ref_src=twsrc%5Etfw">@tobykeith</a> <a href="https://twitter.com/hashtag/letshaveaparty?src=hash&amp;ref_src=twsrc%5Etfw">#letshaveaparty</a> <a href="https://t.co/6bqEdoFqvd">pic.twitter.com/6bqEdoFqvd</a></p>&mdash; Albert Y. Kim (@rudeboybert) <a href="https://twitter.com/rudeboybert/status/976850326874705920?ref_src=twsrc%5Etfw">March 22, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+
+## Second: Virtual simulations
+
+* Take a [virtual bowl](http://moderndive.netlify.com/8-sampling.html#virtual-sampling-from-bowl)
+* Extract a virtual sample using a [virtual shovel](http://moderndive.netlify.com/8-sampling.html#virtually-using-shovel-once)
+* Construct the sampling distribution by repeating the above 1000 times.
+* Plot!
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(moderndive)
+
+# Take 1000 virtual samples of size n = 50 from bowl
+virtual_samples <- bowl %>%
+  rep_sample_n(size = 50, reps = 1000)
+
+# Compute 1000 simulated p-hats based on these 1000 virtual samples
+virtual_p_hats <- virtual_samples %>% 
+  group_by(replicate) %>% 
+  summarize(p_hat = mean(color == "red"))
+
+# Plot sampling distribution
+ggplot(virtual_p_hats, aes(x = p_hat)) +
+  geom_histogram(binwidth = 0.05) +
+  labs(title = "Sampling distribution of p_hat based on samples of n = 50")
+```
+
+
+## Simulations
+
+> 1. Need to do tactile simulations first; too many layers of abstraction otherwise 
+> 1. Draw link between tactile (actual bowl and shovel) and virtual (data frames and functions in R) then
+> 1. To perform and deconstruct latter, students need to be equipped with a data science toolbox: data visualization and basic data wrangling.
+> 1. [Example involving sample means](https://rudeboybert.github.io/STAT135/static/PS/PS10_solutions.html): Average year of minting of pennies using a virtual sack of $N=800$ `pennies`
+
+
+## State of affairs
+
+* Beta version of above has been implemented in development version of ModernDive [Chapter 8: Sampling](https://moderndive.github.io/moderndive_book/8-sampling.html)
+* **Under construction**: Chapters 9 thru 11 on confidence intervals, hypothesis testing, and inference for regression
+* Pending developments on `infer` package <https://infer.netlify.com/>
+
+
+## infer package for tidy statistical inference
+
+<center>
+<img src="https://i.imgur.com/TYff7S5.png" alt="Drawing" style="height: 200px;"/>
+</center>
+
+
+* Confidence intervals: [image](https://ismayc.github.io/talks/ness-infer/img/infer_ci.jpg)
+* Hypothesis tests: [image](https://ismayc.github.io/talks/ness-infer/slide_deck.html#119)
+* Allan Downey idea of ["There is only one test"](https://ismayc.github.io/talks/ness-infer/slide_deck.html#155)
+
+
+
+
+
+
+
+## Principle 3: Coding as a basic skill
+
+* Battle is more psychological than anything else.
+* I'm constantly saying: "Don't code from scratch. Rather copy, paste, and tweak!"
+* ModernDive Chapters 3 thru 5 on data visualization with `ggplot2`, tidy data, and data wrangling with `dplyr` align near perfectly with DataCamp ["Introduction to the Tidyverse"](https://www.datacamp.com/courses/introduction-to-the-tidyverse) so we can outsource less sexy aspects of teaching coding for data science to beginners.
+
+<img src="tidyverse.png" alt="Drawing" style="height: 250px;"/>
+
+
+
+## Examples of student work
+
+Spring 2018 STAT135 term projects: ([project guidelines](https://rudeboybert.github.io/STAT135/term_project.html)):
+
+1. [Sweet Home Alabama: Voter Support for Trump and Moore Across Racially-Divided Counties](http://rpubs.com/mbhandari20/374964)
+1. [The World of Dark Chocolate](http://rpubs.com/amemily/383723)
+1. [The Average Yards of an Above-Average Quarterback: Examining Tom Brady’s average yards and scoring](http://rpubs.com/cmacgillivray19/TB12draft1)
+
+
+
+
+
+## Thanks!
+
+Chester Ismay          |  Albert Y. Kim
+:-------------------------:|:-------------------------:
+<img src="https://github.com/moderndive/moderndive_book/blob/master/images/ismay.jpeg?raw=true" alt="Drawing" style="height: 150px;"/> | <img src="https://github.com/moderndive/moderndive_book/blob/master/images/kim.jpeg?raw=true" alt="Drawing" style="height: 150px;"/> 
+
+* Chester Ismay - Senior Curriculum Lead, DataCamp
+    + Twitter: [\@old_man_chester](https://twitter.com/old_man_chester)
+    + GitHub: [ismayc](https://github.com/ismayc)
+* Albert Y. Kim - Assnt Prof. of Statistical & Data Sciences, Smith College
+    + Twitter: [\@rudeboybert](https://twitter.com/rudeboybert)
+    + GitHub: [rudeboybert](https://github.com/rudeboybert)
+
+
+
+## Resources
+
+* Slides at [bit.ly/user_boston](http://bit.ly/user_boston)
+* Release version of textbook at [moderndive.com](http://moderndive.com/) and development version at [moderndive.netlify.com](http://moderndive.netlify.com/) (source of today's examples)
+* RStudio [`bookdown`](https://bookdown.org/yihui/bookdown/) package source code on GitHub at [github.com/moderndive/](https://github.com/moderndive/)
+* `infer` package homepage: <https://infer.netlify.com/>
+

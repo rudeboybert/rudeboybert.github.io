@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/391635/9ca64db9ea6f42958f350b8055ea7d2d
+bundleId: https://api.rpubs.com/api/v1/document/391635/9ca64db9ea6f42958f350b8055ea7d2d
+url: http://rpubs.com/rudeboybert/391635
+when: 1527112363.57027
