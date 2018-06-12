@@ -1,5 +1,5 @@
 ---
-title: "\"Tame\" data principles and the fivethirtyeight R package"
+title: "\"Tame\" data principles and the <br>fivethirtyeight R package"
 author: "Albert Y. Kim - Amherst College -> Smith College (July 2018)"
 date: "Tuesday June 12, 2018"
 output:
@@ -12,7 +12,6 @@ output:
     theme: cosmo
     highlight: tango  
 ---
-
 
 <style>
 h1 { 
@@ -50,11 +49,13 @@ if(TRUE){
 
 ## Today's focus
 
-What data to use in introductory statistics and data science courses? Ideally data that's
+What data to use in introductory statistics and data science courses? 
 
-1. **Rich** enough to answer meaningful questions with
-1. **Real** enough to ensure that there is context
-1. **Realistic** enough to convey to the reality of much of the world's data 
+Ideally data that's:
+
+> 1. **Rich** enough to answer meaningful questions with
+> 1. **Real** enough to ensure that there is context
+> 1. **Realistic** enough to convey to the reality of much of the world's data 
 
 
 ## One goal
@@ -86,12 +87,12 @@ On the other hand, from [New York Times](https://www.nytimes.com/2014/08/18/tech
 ## Two conflicting goals
 
 * On the one hand: Minimize prerequisites to research
-* On the other: Do not betray reality of data as it exists outside classroom
+* On the other: Do not betray reality of data as it exists in much of the world
 
 
 ## Back to analogy
 
-In other words, a balancing act is required between
+In other words, a balancing act is required between:
 
 Data with no prerequisites needed | Data as it exists "in the wild"  
 :-------------------------:|:-------------------------:
@@ -100,10 +101,10 @@ Data with no prerequisites needed | Data as it exists "in the wild"
 
 ## Data "taming"
 
-Data "taming" sets out to
+Data "taming" sets out to balance:
 
-* On the one hand: Perform enough pre-processing so that data is accessible to R novices
-* On the other: Not perform so much pre-processing as to betray the reality of data as it exists "in the wild"
+* On the one hand: Performing enough pre-processing so that data is accessible to R novices
+* On the other: Not performing so much pre-processing as to betray the reality of data as it exists "in the wild"
 
 <!--
 ## Data petting zoo first
@@ -125,24 +126,31 @@ Data "taming" sets out to
 
 ## "Tame" data principles
 
-We propose the following <a target="_blank" class="page-link" href="http://rpubs.com/rudeboybert/fivethirtyeight_tamedata">"tame" data principles</a> to remove biggest hurdles R novices face.
+We propose the following <a target="_blank" class="page-link" href="http://rpubs.com/rudeboybert/fivethirtyeight_tamedata">"tame" data principles</a> to remove biggest hurdles R novices face:
 
 > 1. Clean variable names
-> 1. ID variables in left-hand columns
-> 1. Clean dates (More generally: clean numerical representations)
-> 1. Clean categorical variables 
-> 1. Consistent <a target="_blank" class="page-link" href="http://r4ds.had.co.nz/tidy-data.html">"tidy"</a> format
+> 1. Identification variables in left-hand columns
+> 1. Clean dates
+> 1. Logically ordered categorical variables 
+> 1. Consistent "tidy" format
 
 
 ## fivethirtyeight package
 
-The `fivethirtyeight` R package:
+In the `fivethirtyeight` R package, [Chester Ismay](https://twitter.com/old_man_chester), [Jennifer Chunn](https://twitter.com/jchunn206), and I:
 
-* Takes FiveThirtyEight's raw article data from <a target="_blank" class="page-link" href="https://github.com/fivethirtyeight/data">GitHub</a>
-* Includes **pre-processed raw data that follows "tame" data principles**
-* Makes data, documentation, and original article easily accessible via an R package
+> * Take FiveThirtyEight's raw article data from <a target="_blank" class="page-link" href="https://github.com/fivethirtyeight/data">GitHub</a>
+> * **Pre-process the raw data so that it follows "tame" data principles**
+> * Make the tame data, documentation, and original article easily accessible via an R package
 
-Examples are in R, so I suggest you follow in HTML version of this talk available at <a target="_blank" class="page-link" href="http://bit.ly/causeweb_tame">bit.ly/causeweb_tame</a>
+
+## Examples
+
+Following examples involve code, so I suggest you follow in HTML version of slides:
+
+1. In your browser, go to <a target="_blank" class="page-link" href="http://bit.ly/causeweb_tame">bit.ly/causeweb_tame</a>
+1. In the left-hand menu, click on "Principle 1: Clean variable names"
+
 
 ## Principle 1: Clean variable names
 
@@ -172,7 +180,7 @@ mosaicplot(~ `Do you have any children under 18?` + `In general, is itrude to br
            data = flying_raw,  main = "Raw data",
            xlab = "Have a baby?", ylab = "Is it rude?")
 mosaicplot(~ children_under_18 + baby,
-           data = flying_raw,  main = "Raw data",
+           data = flying,  main = "Tamed data",
            xlab = "Have a baby?", ylab = "Is it rude?")
 ```
 ```{r, echo=FALSE, fig.width=16/1.4, fig.height=9/1.4}
@@ -194,22 +202,19 @@ More organizational. Any identification variables that uniquely identify the obs
     1. [`elements-by-episode.csv`](https://github.com/fivethirtyeight/data/tree/master/bob-ross)
 
 ```{r}
-library(dplyr)
 library(fivethirtyeight)
 
-# Both title and imdb site tag uniquely identify movies
-biopics %>% 
-  sample_n(3)
+# Both title and imdb site tag uniquely identify movies. Show only 8 first
+# columns and 3 first rows of dataset:
+biopics[1:3, 1:8]
 
 # episode variable uniquely identifies episodes of "The Joy of Painting". Show
-# only first 10 columns of dataset:
+# only 8 first columns and 3 randomly chosen rows of dataset using dplyr package
+library(dplyr)
 bob_ross %>% 
-  select(1:10) %>% 
+  select(1:8) %>% 
   sample_n(3)
 ```
-
-
-
 
 
 ## Principle 3: Dates
@@ -221,6 +226,7 @@ bob_ross %>%
 
 ```{r}
 library(readr)
+library(dplyr)
 library(fivethirtyeight)
 
 # Raw data: year, month, day are separate variables
@@ -246,7 +252,6 @@ plot(x = US_births_1999$date, y = US_births_1999$births, type = "l",
 ```
 
 
-
 ## Principle 4: Categorical variables
 
 ### a) Comparing raw and tamed data
@@ -269,7 +274,7 @@ bechdel$clean_test[1:5]
 
 ### b) Why should we care?
 
-R by default plots `characters` in alphabetical order, whereas with `factors` we can set the order of the `levels`. In this case, we can have the bars ordered along the hierarchical nature of Bechdel test:
+R by default plots `characters` in alphabetical order, whereas with `factors` we can set the order of the `levels`; reordering a categorical variable/factor in R is tough, especially for new R users. In this case, we can have the bars ordered along the hierarchical nature of Bechdel test:
 
 ```{r, eval=FALSE}
 # Using raw data:
@@ -291,7 +296,6 @@ p2 <- ggplot(bechdel, aes(x = clean_test)) +
   labs(x = "Bechdel test outcome", y = "count", title = "Tamed data")
 p1 + p2
 ```
-
 
 
 ## Principle 5: "Tidy" data format
@@ -330,7 +334,6 @@ ggplot(drinks_tidy, aes(x = type, y = servings)) +
   geom_boxplot() +
   labs(x = "Alcohol type", y = "Number of servings", title = "Worldwide alcohol consumption")
 ```
-
 
 
 ## Advanced example
@@ -375,16 +378,14 @@ ggplot(data = pres_2016_trail, aes(x = lng, y = lat)) +
 
 ## Comments
 
-* Analogy I like: `fivethirtyeight` is like a data petting zoo
-* No "universal" balance of two goals: it will vary depending on your students' experience, requirements, and needs.
-* `fivethirtyeight` package used in other contexts:
-    1. Intermediate-level data science courses
-    1. Advanced R package development project
+> * Analogy I heard that I like: `fivethirtyeight` is like a data petting zoo
+> * No "universal" balance of two goals: it will vary depending on your students' experience, requirements, and needs
+> * Tame data principles and `fivethirtyeight` can be used in other contexts: 1) intermediate-level data science courses and 2) advanced projects
 
 
 ## Used in data science courses
 
-> 1. Recruited STAT231 Data Science to "tame" datasets STAT135 Intro students found for their final projects
+> 1. Recruited STAT231 Data Science students to "tame" datasets STAT135 Intro students found for their final projects
 > 1. Available on GitHub: data wrangling source code by package authors to convert 538 raw CSV data to "tamed" format
 [`process_data_sets_albert.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_albert.R), [`process_data_sets_chester.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_chester.R), [`process_data_sets_jen.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_jen.R)
 
@@ -392,8 +393,8 @@ ggplot(data = pres_2016_trail, aes(x = lng, y = lat)) +
 ## Used for advanced projects
 
 > * `fivethirtyeight` package is in maintenance mode: no new development, only need to add new datasets
-> * Internship model of learning/development: learning [R package construction](http://r-pkgs.had.co.nz/), [GitHub](http://happygitwithr.com/), communication and project management skills, etc.
-> * RStudio's 2018 [`broom` package summer internship](https://blog.rstudio.com/2018/04/18/summer-interns/) follows a similar model. 
+> * Get student interns to do it instead!
+> * Internship model of learning/development: learning [R package construction](http://r-pkgs.had.co.nz/), [GitHub](http://happygitwithr.com/), communication and project management skills, etc. RStudio's 2018 [`broom` package summer internship](https://blog.rstudio.com/2018/04/18/summer-interns/) follows a similar model. 
 > * **Undergraduate student** written data wrangling source code to convert 538 raw CSV data to "tamed" format
 [`process_data_sets_maggie.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_maggie.R), [`process_data_sets_meredith.R`](https://github.com/rudeboybert/fivethirtyeight/blob/master/data-raw/process_data_sets_meredith.R)
 
@@ -404,4 +405,5 @@ ggplot(data = pres_2016_trail, aes(x = lng, y = lat)) +
 <a target="_blank" class="page-link" href="https://escholarship.org/uc/item/0rx1231m#main">PDF</a>)
 * Package <a target="_blank" class="page-link" href="https://fivethirtyeight-r.netlify.com/articles/fivethirtyeight.html">homepage</a> including list of all datasets
 * Link to this presentation <a target="_blank" class="page-link" href="http://bit.ly/causeweb_tame">bit.ly/causeweb_tame</a>
+    
 
