@@ -3,7 +3,7 @@ title: "\"Tame\" data principles and the <br>fivethirtyeight R package"
 author: "Albert Y. Kim - Amherst College -> Smith College (July 2018)"
 date: "Tuesday June 12, 2018"
 output:
-#  ioslides_presentation:
+  ioslides_presentation:
   html_document:
     toc: true
     toc_depth: 2
