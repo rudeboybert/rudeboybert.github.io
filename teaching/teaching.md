@@ -10,7 +10,7 @@ description: Teaching
 **Amherst College**  
 
 * STAT 135 - Introduction to Statistics via Modeling: [Fall 2017](https://rudeboybert.github.io/STAT135/)
-* STAT 495 - Advanced Data Analysis: [Fall 2017](https://rudeboybert.github.io/STAT495/)
+<!--* STAT 495 - Advanced Data Analysis: [Fall 2017](https://rudeboybert.github.io/STAT495/)-->
 
 
 
@@ -22,7 +22,7 @@ description: Teaching
 * MATH 116 - Introduction to Statistical and Data Sciences: [Spring 2017](https://rudeboybert.github.io/MATH116/), [Fall 2016](https://rudeboybert.github.io/2016-09-MATH116/)
 * MATH 116 - Introduction to Statistical Science: [Fall 2015](courses/MATH116/2015-09.html)
 * MATH 216 - Introduction to Data Science: [Fall 2016](https://rudeboybert.github.io/MATH216/), [Spring 2016](courses/MATH216/2016-02.html)
-* MATH 218 - Statistical/Machine Learning: [Spring 2017](https://rudeboybert.github.io/MATH218/)
+<!--* MATH 218 - Statistical/Machine Learning: [Spring 2017](https://rudeboybert.github.io/MATH218/)-->
 * MATH 311 - Theory of Statistics: [Spring 2016](courses/MATH311/2016-02.html)
 
 **Reed College**
